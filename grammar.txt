@@ -1,0 +1,14 @@
+CLANDESTINO Corpus: Developed by Microsoft, this dataset focuses on toxic language detection in Spanish. It addresses the challenges posed by the diverse dialects and cultural nuances across Spanish-speaking countries. The corpus includes annotations from native speakers spanning seven countries, covering various toxic categories such as hate speech, microaggressions, and positive stereotyping. 
+GITHUB
+
+DETOXIS (DEtection of TOXicity in comments In Spanish): Part of the IberLEF 2021 workshop, DETOXIS is designed for detecting toxicity in Spanish comments, particularly those related to immigration. The dataset is divided into two subtasks: toxicity detection and toxicity level detection. 
+GITHUB
+
+NewsCom-TOX Corpus: This corpus consists of 4,359 comments in Spanish posted in response to news articles related to immigration. Each comment is manually annotated for various categories, including stance, stereotype, sarcasm, insult, and aggressiveness, allowing for a nuanced analysis of toxicity levels. 
+SPRINGER LINK
+
+Toxic Comments in French, Spanish, and German: Available on Kaggle, this dataset includes toxic comments in multiple languages, including Spanish. It's useful for training multilingual models or for comparative studies across languages. 
+KAGGLE
+
+Jigsaw Multilingual Toxic Comment Classification: While the original Jigsaw dataset is primarily in English, this multilingual extension includes comments in several languages, including Spanish. It's beneficial for building models that can detect toxicity across different languages. 
+ASHWIN MATHUR
