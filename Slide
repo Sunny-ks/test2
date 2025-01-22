@@ -1,0 +1,39 @@
+Key Factors in Language Model Performance
+
+Parameter Size Matters:
+
+Large models like GPT-4o: 1.75 trillion parameters
+
+Smaller models like Mistral v0.3 Instruct: 7 billion parameters
+
+Impact of Size:
+
+Larger models retain significantly more domain-specific and general knowledge.
+
+Smaller models (SLMs) often lack depth in domain-specific expertise.
+
+SLM Phase One Observations
+
+Struggles with Specific Knowledge:
+
+Example: In-game currency knowledge for the Minecraft game is weak.
+
+Prompt Engineering Challenges:
+
+Adding detailed information in prompts, such as specifying in-game currencies like Minecraft emeralds or other domain-specific examples, compensates for the lack of knowledge.
+
+Results in:
+
+Longer Prompts: Increased latency.
+
+Limited Effectiveness: Still struggles with reasoning tasks.
+
+Implications
+
+Latency Trade-off:
+
+More detailed prompts = slower response times, as the number of input tokens to models will increase, leading to longer model inference times.
+
+Reasoning Deficiency:
+
+Limited reasoning capabilities hinder effective problem-solving, as adding details in the prompt does not guarantee that models will effectively use the information, and it is impractical to include exhaustive details about every game in the prompt.
