@@ -1,0 +1,165 @@
+To quantize your model into **2-bit**, **4-bit**, and **8-bit** precision using VPTQ, here are the detailed steps and commands for each configuration:
+
+---
+
+### **General Setup**
+1. **Prepare the Environment**:
+   - Ensure dependencies like PyTorch, Transformers, and the VPTQ repository are installed:
+     ```bash
+     pip install torch transformers datasets tqdm
+     ```
+
+2. **Set Your Model and Dataset**:
+   - Your fine-tuned model should be accessible locally or through Hugging Face (e.g., `path_to_your_model`).
+   - Use a representative calibration dataset to compute Hessians.
+
+---
+
+### **Step 1: Compute Hessians**
+Hessian computation is critical for guiding accurate VPTQ quantization.
+
+#### Command for Hessian Computation:
+```bash
+python hessian_offline_llama.py \
+    --seed 42 \
+    --batch_size 2 \
+    --devset_size 256 \
+    --ctx_size 4096 \
+    --base_model path_to_your_model \
+    --save_path ./hessians/quantized_model \
+    --chunk_size 256 \
+    --sample_proc 4 \
+    --save_activations
+```
+
+- **Arguments**:
+  - `--seed`: Random seed for reproducibility.
+  - `--batch_size`: Number of sequences processed per batch.
+  - `--devset_size`: Number of sequences used to compute Hessians.
+  - `--ctx_size`: Maximum token length for sequences.
+  - `--base_model`: Path to your fine-tuned model.
+  - `--save_path`: Directory where Hessians will be saved.
+  - `--chunk_size`: Number of tokens processed per chunk.
+  - `--sample_proc`: Number of processes for dataset sampling.
+  - `--save_activations`: Saves intermediate activations for resumability.
+
+---
+
+### **Step 2: Quantization Commands**
+
+#### **1. 2-Bit Quantization**
+Quantize your model into **2-bit precision** using the computed Hessians.
+
+```bash
+python quantize_vptq.py \
+    --load_hessian_dir ./hessians/quantized_model \
+    --quant_method vptq \
+    --wbits 2 \
+    --save ./quantized_2bit_model \
+    --enable_perm
+```
+
+- **Arguments**:
+  - `--load_hessian_dir`: Directory containing the computed Hessians.
+  - `--quant_method`: Use the `vptq` quantization method.
+  - `--wbits`: Number of bits for quantization (set to `2` for 2-bit).
+  - `--save`: Directory to save the quantized model.
+  - `--enable_perm`: Enables weight permutation to improve accuracy.
+
+---
+
+#### **2. 4-Bit Quantization**
+Quantize your model into **4-bit precision**:
+
+```bash
+python quantize_vptq.py \
+    --load_hessian_dir ./hessians/quantized_model \
+    --quant_method vptq \
+    --wbits 4 \
+    --save ./quantized_4bit_model \
+    --enable_perm
+```
+
+- Similar to the 2-bit quantization command, but with `--wbits 4`.
+
+---
+
+#### **3. 8-Bit Quantization**
+Quantize your model into **8-bit precision**:
+
+```bash
+python quantize_vptq.py \
+    --load_hessian_dir ./hessians/quantized_model \
+    --quant_method vptq \
+    --wbits 8 \
+    --save ./quantized_8bit_model \
+    --enable_perm
+```
+
+- Similar to the 2-bit and 4-bit quantization commands, but with `--wbits 8`.
+
+---
+
+### **Step 3: Validate the Quantized Models**
+Once the models are quantized, you can test them to ensure they function as expected.
+
+#### Example Validation Script:
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load quantized model
+model = AutoModelForCausalLM.from_pretrained("./quantized_4bit_model", torch_dtype="auto")
+tokenizer = AutoTokenizer.from_pretrained("./quantized_4bit_model")
+
+# Test the model
+input_text = "The capital of France is"
+inputs = tokenizer(input_text, return_tensors="pt")
+output = model.generate(**inputs)
+print(tokenizer.decode(output[0]))
+```
+
+---
+
+### **Optional Enhancements**
+
+1. **Adjust Damping Factor**:
+   - Add damping to the Hessian during quantization to stabilize the process:
+     ```bash
+     --damping 0.01
+     ```
+
+2. **Use Mixed-Bit Quantization**:
+   - Specify different bit-widths for specific layers if needed:
+     ```bash
+     python quantize_vptq.py --mix_bits_config ./mix_bits.json
+     ```
+
+3. **Parallel Processing**:
+   - Increase `--sample_proc` and use multiple GPUs to accelerate Hessian computation.
+
+4. **Custom Dataset**:
+   - Replace `RedPajama-Data-1T` with your own dataset by modifying the `sample_rp1t` function.
+
+---
+
+### **Summary**
+Commands for all configurations:
+1. Compute Hessians:
+   ```bash
+   python hessian_offline_llama.py ...
+   ```
+2. Quantize:
+   - 2-Bit:
+     ```bash
+     python quantize_vptq.py --wbits 2 ...
+     ```
+   - 4-Bit:
+     ```bash
+     python quantize_vptq.py --wbits 4 ...
+     ```
+   - 8-Bit:
+     ```bash
+     python quantize_vptq.py --wbits 8 ...
+     ```
+
+If you'd like help customizing these commands or further optimizing your quantization pipeline, let me know!
