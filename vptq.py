@@ -1,49 +1,112 @@
-def main(args):
-    logger = get_logger()
-    # Ensure directories are created
-    os.makedirs(args.store_inv_hessian_dir, exist_ok=True)
+To quantize your fine-tuned model to **2 bits**, **4 bits**, and **8 bits** using the VPTQ algorithm, you need to adjust the parameters `--num_centroids` and `--num_res_centroids` in the `run_vptq.py` command. These parameters determine the quantization levels for main and residual centroids.
 
-    percdamp = 0.01  # Damping factor
-    hessian_files = [f for f in os.listdir(args.load_hessian_dir) if f.endswith('.pt')]
-    logger.info(f"Found Hessian files: {hessian_files}")
+Here are the commands for each bitwidth:
 
-    for hessian_file in (pbar := tqdm.tqdm(hessian_files, desc="Inverting Hessian")):
-        hessian_path = os.path.join(args.load_hessian_dir, hessian_file)
-        try:
-            hessian, mu = load_hessian(hessian_path, pbar=pbar, logger=logger)
-            logger.info(f"Loaded Hessian from {hessian_path}")
-            dev = 'cuda' if torch.cuda.is_available() else 'cpu'
-            hessian = hessian.to(dev)
+---
 
-            zero_idx = torch.diag(hessian) == 0
-            hessian[zero_idx, zero_idx] = 1
+### **1. Quantize to 2 bits**
+For 2-bit quantization:
+- **Main centroids:** \(2^2 = 4\)
+- **Residual centroids:** \(2^0 = 1\) (no residual quantization)
 
-            # Permutation logic
-            perm = torch.argsort(torch.diag(hessian), descending=True).to(dev)
-            if args.enable_perm:
-                hessian = hessian[perm][:, perm]
+Command:
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run_vptq.py \
+    --model_name <your-finetuned-model-name> \
+    --output_dir outputs/<your-model-name>-2bits/ \
+    --vector_lens -1 8 \
+    --group_num 1 \
+    --num_centroids -1 4 \
+    --num_res_centroids -1 1 \
+    --npercent 0 \
+    --blocksize 128 \
+    --new_eval \
+    --seq_len 8192 \
+    --kmeans_mode hessian \
+    --num_gpus 8 \
+    --enable_perm \
+    --enable_norm \
+    --save_model \
+    --save_packed_model \
+    --hessian_path <hessian-file-path> \
+    --inv_hessian_path <inv-hessian-file-path> \
+    --ktol 1e-5 --kiter 100
+```
 
-            # Add damping
-            damp = percdamp * torch.mean(torch.diag(hessian))
-            diag = torch.arange(hessian.shape[0], device=dev)
-            hessian[diag, diag] += damp
+---
 
-            # Inverse Hessian computation
-            hessian = torch.linalg.cholesky(hessian)
-            hessian = torch.cholesky_inverse(hessian)
-            hessian = torch.linalg.cholesky(hessian, upper=True)
-            inv_hessian = hessian
+### **2. Quantize to 4 bits**
+For 4-bit quantization:
+- **Main centroids:** \(2^4 = 16\)
+- **Residual centroids:** \(2^4 = 16\)
 
-            # Save inverted Hessian
-            save_path = os.path.join(args.store_inv_hessian_dir, hessian_file)
-            if not args.enable_perm:
-                perm = torch.arange(inv_hessian.shape[0])
+Command:
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run_vptq.py \
+    --model_name <your-finetuned-model-name> \
+    --output_dir outputs/<your-model-name>-4bits/ \
+    --vector_lens -1 8 \
+    --group_num 1 \
+    --num_centroids -1 16 \
+    --num_res_centroids -1 16 \
+    --npercent 0 \
+    --blocksize 128 \
+    --new_eval \
+    --seq_len 8192 \
+    --kmeans_mode hessian \
+    --num_gpus 8 \
+    --enable_perm \
+    --enable_norm \
+    --save_model \
+    --save_packed_model \
+    --hessian_path <hessian-file-path> \
+    --inv_hessian_path <inv-hessian-file-path> \
+    --ktol 1e-5 --kiter 100
+```
 
-            torch.save({'invH': inv_hessian.to('cpu'),
-                        'perm': perm.to('cpu'),
-                        'zero_idx': zero_idx.to('cpu')}, save_path)
-            logger.info(f"Saved inverted Hessian to {save_path}")
-            pbar.set_postfix_str(f"Saved inverted Hessian to {save_path}")
+---
 
-        except Exception as e:
-            logger.error(f"Error processing {hessian_file}: {e}", exc_info=True)
+### **3. Quantize to 8 bits**
+For 8-bit quantization:
+- **Main centroids:** \(2^8 = 256\)
+- **Residual centroids:** \(2^8 = 256\)
+
+Command:
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run_vptq.py \
+    --model_name <your-finetuned-model-name> \
+    --output_dir outputs/<your-model-name>-8bits/ \
+    --vector_lens -1 8 \
+    --group_num 1 \
+    --num_centroids -1 256 \
+    --num_res_centroids -1 256 \
+    --npercent 0 \
+    --blocksize 128 \
+    --new_eval \
+    --seq_len 8192 \
+    --kmeans_mode hessian \
+    --num_gpus 8 \
+    --enable_perm \
+    --enable_norm \
+    --save_model \
+    --save_packed_model \
+    --hessian_path <hessian-file-path> \
+    --inv_hessian_path <inv-hessian-file-path> \
+    --ktol 1e-5 --kiter 100
+```
+
+---
+
+### **General Notes**
+1. Replace placeholders like `<your-finetuned-model-name>` and `<hessian-file-path>` with actual values:
+   - `--model_name`: Path to your fine-tuned model.
+   - `--hessian_path` and `--inv_hessian_path`: Path to precomputed Hessian and inverse Hessian files. You can skip these if you don't have them, but accuracy might be affected.
+
+2. Adjust the number of GPUs (`--num_gpus`) or GPU IDs in `CUDA_VISIBLE_DEVICES` based on your hardware availability.
+
+3. Logs can be checked for quantization accuracy:
+   ```bash
+   cat outputs/<your-model-name>-Xbits/{your_path}/log/0.log
+   ```
+
+Let me know if you want me to explain or customize any part of these commands!
