@@ -1,0 +1,82 @@
+#!/bin/bash
+
+# Define the commands
+cmd_2bit="CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run_vptq.py \
+        --model_name Qwen/Qwen2.5-7B-Instruct \
+        --output_dir outputs/Qwen2.5-7B-Instruct-2bit/ \
+        --vector_lens -1 8 \
+        --group_num 1 \
+        --num_centroids -1 1024 \
+        --num_res_centroids -1 16 \
+        --npercent 0 \
+        --blocksize 128 \
+        --new_eval \
+        --seq_len 8192 \
+        --kmeans_mode hessian \
+        --num_gpus 8 \
+        --enable_perm \
+        --enable_norm \
+        --save_model \
+        --save_packed_model \
+        --hessian_path Hessians-Qwen2.5-7B-Instruct-6144-8k \
+        --inv_hessian_path InvHessians-Qwen2.5-7B-Instruct-6144-8k \
+        --ktol 1e-5 --kiter 100"
+
+cmd_3bit="CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run_vptq.py \
+        --model_name Qwen/Qwen2.5-7B-Instruct \
+        --output_dir outputs/Qwen2.5-7B-Instruct-3bit/ \
+        --vector_lens -1 8 \
+        --group_num 1 \
+        --num_centroids -1 65536 \
+        --num_res_centroids -1 256 \
+        --npercent 0 \
+        --blocksize 128 \
+        --new_eval \
+        --seq_len 8192 \
+        --kmeans_mode hessian \
+        --num_gpus 8 \
+        --enable_perm \
+        --enable_norm \
+        --save_model \
+        --save_packed_model \
+        --hessian_path Hessians-Qwen2.5-7B-Instruct-6144-8k \
+        --inv_hessian_path InvHessians-Qwen2.5-7B-Instruct-6144-8k \
+        --ktol 1e-5 --kiter 100"
+
+cmd_8bit="CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python run_vptq.py \
+        --model_name Qwen/Qwen2.5-7B-Instruct \
+        --output_dir outputs/Qwen2.5-7B-Instruct-8bit/ \
+        --vector_lens -1 8 \
+        --group_num 1 \
+        --num_centroids -1 16777216 \
+        --num_res_centroids -1 256 \
+        --npercent 0 \
+        --blocksize 128 \
+        --new_eval \
+        --seq_len 8192 \
+        --kmeans_mode hessian \
+        --num_gpus 8 \
+        --enable_perm \
+        --enable_norm \
+        --save_model \
+        --save_packed_model \
+        --hessian_path Hessians-Qwen2.5-7B-Instruct-6144-8k \
+        --inv_hessian_path InvHessians-Qwen2.5-7B-Instruct-6144-8k \
+        --ktol 1e-5 --kiter 100"
+
+# Run the commands with a 3-minute sleep in between
+echo "Starting 2-bit quantization..."
+eval $cmd_2bit
+echo "2-bit quantization complete. Sleeping for 3 minutes..."
+sleep 180
+
+echo "Starting 3-bit quantization..."
+eval $cmd_3bit
+echo "3-bit quantization complete. Sleeping for 3 minutes..."
+sleep 180
+
+echo "Starting 8-bit quantization..."
+eval $cmd_8bit
+echo "8-bit quantization complete."
+
+echo "All quantization processes complete."
