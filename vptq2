@@ -1,0 +1,80 @@
+The image appears to show configuration parameters for a quantization process, including settings for 2, 4, and 8 bits. I'll guide you through setting these configurations programmatically for your VPTQ quantization workflow.
+
+---
+
+### **Configuration for 2, 4, and 8 Bits**
+Key fields in the configuration for controlling quantization:
+- **`num_centroids`**: Controls the number of main centroids, which impacts the main quantization bitwidth.
+  - `num_centroids = [4]` → 2 bits (\( \log_2(4) = 2 \))
+  - `num_centroids = [16]` → 4 bits (\( \log_2(16) = 4 \))
+  - `num_centroids = [256]` → 8 bits (\( \log_2(256) = 8 \))
+
+- **`num_res_centroids`**: Controls the number of residual centroids for refinement, similarly impacting the bitwidth.
+
+---
+
+### **Example JSON Configurations**
+Below are JSON configurations for 2-bit, 4-bit, and 8-bit quantization:
+
+#### **2-Bit Quantization**
+```json
+"layer_config": {
+    "vector_lens": [-1, 8],
+    "num_centroids": [4], 
+    "num_res_centroids": [1],
+    "enable_norm": true,
+    "enable_perm": false,
+    "bias": false
+}
+```
+
+#### **4-Bit Quantization**
+```json
+"layer_config": {
+    "vector_lens": [-1, 8],
+    "num_centroids": [16], 
+    "num_res_centroids": [16],
+    "enable_norm": true,
+    "enable_perm": false,
+    "bias": false
+}
+```
+
+#### **8-Bit Quantization**
+```json
+"layer_config": {
+    "vector_lens": [-1, 8],
+    "num_centroids": [256], 
+    "num_res_centroids": [256],
+    "enable_norm": true,
+    "enable_perm": false,
+    "bias": false
+}
+```
+
+---
+
+### **Command to Run**
+Ensure the configuration file reflects these settings. Then, use a command similar to the following for each bit configuration:
+
+```bash
+python run_vptq.py \
+    --model_name <path-to-model> \
+    --output_dir <path-to-output> \
+    --config_path <path-to-config-file> \
+    --enable_perm
+```
+
+Replace:
+- `<path-to-model>` with your model path.
+- `<path-to-output>` with your desired output directory.
+- `<path-to-config-file>` with the path to your JSON configuration.
+
+---
+
+### **Verify Results**
+Once the process completes, inspect the logs and the model outputs to ensure that:
+1. The quantization bitwidth matches the desired settings.
+2. The proxy errors (before and after quantization) are acceptable.
+
+Let me know if you'd like further assistance!
