@@ -1,0 +1,26 @@
+from transformers import AutoModelForCausalLM, AutoTokenizer, GPTQConfig
+
+# Specify the model ID and desired quantization configuration
+model_id = "facebook/opt-125m"  # Replace with your desired model ID
+quantization_config = GPTQConfig(
+    bits=4,                        # Set quantization to 4 bits
+    dataset="c4",                  # Calibration dataset
+    tokenizer=AutoTokenizer.from_pretrained(model_id),  # Tokenizer for the dataset
+    enable_act_order=True          # Activate act-order for better accuracy
+)
+
+# Load tokenizer
+tokenizer = AutoTokenizer.from_pretrained(model_id)
+
+# Load and quantize the model
+model = AutoModelForCausalLM.from_pretrained(
+    model_id,
+    device_map="auto",             # Automatically map to available devices
+    quantization_config=quantization_config
+)
+
+# Save the quantized model and tokenizer
+save_path = "./quantized_model"
+model.save_pretrained(save_path)
+tokenizer.save_pretrained(save_path)  # Save the tokenizer to the same path
+print(f"Quantized model and tokenizer saved at {save_path}")
