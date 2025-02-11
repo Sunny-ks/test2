@@ -1,0 +1,41 @@
+threat_words = [
+    # Violence & Homicide
+    "asesinar", "matar", "homicidio", "golpear", "apuñalar", "estrangular", "decapitar", "linchar", "tiroteo",
+    "disparar", "agresión", "crueldad", "represalia", "filo de cuchillo", "incendiar", "torturar", "ejecutar",
+    "desmembrar", "masacre", "matanza", "ajusticiar", "brutalidad", "sangre", "carnicería", "horror", "genocidio",
+    
+    # Terrorism & Extremism
+    "terrorismo", "terrorista", "radicalización", "radicalismo", "yihad", "extremismo", "extremista", "fanático",
+    "fundamentalismo", "insurgencia", "sublevación", "levantamiento", "atentar", "atentado", "hacer estallar",
+    "detonador", "explosivo", "bomba", "coche bomba", "granada", "misil", "mortero", "dinamita", "suicida",
+    "kamikaze", "guerra santa", "conspiración", "sabotaje", "desestabilizar", "golpe de estado", "rebelión",
+    
+    # Kidnapping & Extortion
+    "secuestrar", "secuestrador", "rehenes", "extorsión", "chantaje", "amenaza", "intimidar", "hostigamiento",
+    "cárcel clandestina", "tortura", "desaparición forzada", "traficante", "mafioso", "cartel", "crimen organizado",
+    "sicario", "asesino a sueldo", "narco", "pandilla", "bandas armadas", "escuadrón de la muerte",
+
+    # Cyber Threats & Digital Attacks
+    "ciberataque", "ciberterrorismo", "hackear", "phishing", "ransomware", "botnet", "filtración de datos",
+    "desinformación", "guerra cibernética", "propaganda radical", "manipulación digital", "ataque de denegación de servicio",
+    "infiltración", "espionaje", "contrainteligencia", "piratería informática", "anonimato en redes",
+
+    # Weapons & Explosives
+    "rifle", "pistola", "revólver", "subfusil", "escopeta", "ametralladora", "bazuca", "granada", "misil", "mortero",
+    "dinamita", "artefacto explosivo", "arma biológica", "arma química", "arma nuclear", "arsenal", "cargamento de armas",
+    "fabricación de explosivos", "municiones", "balas", "cuchillo", "navaja", "machete", "espada", "puñal", "daga", "hacha",
+
+    # Organized Crime & Drug Trafficking
+    "tráfico de armas", "tráfico de drogas", "narcotráfico", "cartel", "narco", "lavado de dinero", "contrabando",
+    "mafioso", "crimen organizado", "venganza", "ajuste de cuentas", "extorsionador", "terror financiero",
+
+    # Public Disorder & Unrest
+    "revolución", "anarquismo", "insurgente", "protesta violenta", "desobediencia civil", "disturbios", "caos",
+    "anarquista", "levantamiento", "bloqueo de carreteras", "agitación política", "represión", "autoritarismo",
+    "dictadura", "estado de excepción", "militarización", "represalias", "golpe", "autoritarismo", "persecución",
+    
+    # Psychological & Threatening Phrases
+    "miedo", "pánico", "terror", "horroroso", "amenazador", "amenazante", "amenazado", "llamado a la violencia",
+    "fuego cruzado", "provocación", "incitación al odio", "odio", "represión", "hostilidad", "xenofobia", "racismo",
+    "discriminación", "venganza", "conspiración global", "orden de ataque", "declaración de guerra"
+]
