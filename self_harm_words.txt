@@ -1,0 +1,50 @@
+self_harm_words = [
+    # Direct Self-Harm Terms
+    "autolesión", "autolesionarse", "herirse", "cortarse", "cortes", "mutilación", "quemarse", "rascarse hasta sangrar",
+    "golpearse", "abrirse la piel", "lastimarse", "dañarse", "sangrar", "sangre", "dolor físico", "cuchilla", "navaja",
+    "hoja de afeitar", "cicatrices", "marcas", "arañazos", "laceraciones", "moratones", "quemaduras", "autocastigo",
+    "autodestrucción", "dolor", "autoagresión", "herida abierta", "dolor constante", "piel rota", "desangrarse",
+
+    # Suicidal Thoughts & Intentions
+    "suicidio", "suicidarse", "quiero morir", "odio mi vida", "no quiero vivir", "me rindo", "adiós mundo", "nadie me extrañará",
+    "no vale la pena vivir", "quiero desaparecer", "quiero acabar con todo", "moriría mejor", "fin de todo", "ya no aguanto más",
+    "vida sin sentido", "no tiene caso seguir", "depresión extrema", "quiero acabar con mi dolor", "pensando en el final", 
+    "deseo estar muerto", "deseo desaparecer", "nadie me quiere", "mejor muerto", "sería mejor sin mí", "odio estar vivo",
+    "no tengo futuro", "nadie me necesita", "quiero descansar para siempre", "no puedo más", "quiero saltar", "quiero ahorcarme",
+    "quiero tomar pastillas", "quiero cortarme más profundo", "quiero desmayarme", "deseo dormirme y no despertar",
+    
+    # Encouragement & Provoking Others for Self-Harm
+    "hazlo", "atrévete", "córtate", "sólo hazlo", "nadie se enterará", "nadie se preocupa", "no seas cobarde", "profundo esta vez",
+    "hazlo de verdad", "usa algo más afilado", "nadie te va a salvar", "desaparece", "prueba con fuego", "intenta con veneno",
+    "hazlo si eres valiente", "no importa lo que pase", "nadie te extrañará", "no te quejes y hazlo", "deja de perder el tiempo",
+    "es la única salida", "tómate todas las pastillas", "salta ya", "haz que duela más", "golpéate hasta desmayarte",
+    "ahórcate ya", "nada importa", "no seas débil", "nadie te salvará", "prueba con una soga", "apuesta cuánto aguantas",
+    "hazlo si de verdad estás triste", "demuestra que sufres", "sé fuerte y hazlo", "los demás no importan",
+
+    # Depression, Anxiety & Negative Emotions
+    "odio mi vida", "estoy solo", "nadie me entiende", "estoy atrapado", "no tengo salida", "nunca seré feliz",
+    "todo es culpa mía", "no merezco amor", "quiero estar solo para siempre", "me odio a mí mismo", "soy un fracaso",
+    "todo el mundo me odia", "sin esperanzas", "no tengo futuro", "me siento inútil", "nunca mejoraré", "desesperanza",
+    "soy un error", "mi vida no tiene sentido", "odio mi existencia", "no tengo amigos", "nadie me apoya",
+    "siempre estoy triste", "quiero desaparecer", "me siento atrapado", "nadie me ayuda", "nunca encontraré paz",
+    "sólo quiero llorar", "me siento vacío", "dolor en el pecho", "no tengo energías", "siempre me rechazan",
+    "no puedo seguir así", "nunca mejoraré", "odio cada día", "quiero estar en un lugar oscuro", "quiero dormir para siempre",
+    
+    # Methods of Self-Harm & Suicide
+    "sobredosis", "ahorcarse", "soga", "pastillas", "veneno", "cuchillo", "navaja", "arma", "salto al vacío",
+    "electrocutarse", "ahogarse", "cápsulas letales", "abrirse las venas", "pastillas para dormir", "arma de fuego",
+    "combinar medicamentos", "cortar profundo", "colgarse", "saltarse una dosis", "cuerda", "saltarse comidas",
+    "deshidratación", "dejar de respirar", "intoxicación", "abuso de sustancias", "ayuno extremo", "asfixia",
+    
+    # Online Encouragement of Self-Harm
+    "te reto a hacerlo", "demuestra que sufres", "hazlo por mí", "nadie se enterará", "no digas nada a nadie",
+    "somos iguales", "te entiendo, hazlo", "sólo una vez", "no tengas miedo", "prueba una vez", "hazlo más fuerte",
+    "inténtalo de nuevo", "te sentirás mejor", "lo mereces", "sólo te hará más fuerte", "debes hacerlo",
+    "el dolor desaparecerá", "nunca mejorarás", "esto es normal", "nadie se preocupa por ti", "tu vida no cambiará",
+    "las cicatrices son hermosas", "sólo hazlo sin pensar", "prueba algo nuevo", "no te detengas", "ve hasta el final",
+    
+    # Encouraging Destructive Behavior
+    "no busques ayuda", "no confíes en nadie", "es mejor así", "no le digas a nadie", "hazlo en secreto", "no vale la pena pedir ayuda",
+    "nadie te ayudará", "ignora a los demás", "hazlo rápido", "nadie puede detenerte", "haz lo que sientas correcto", "no dudes más",
+    "nadie sabrá lo que hiciste", "ve a un lugar aislado", "nadie te buscará", "no pidas ayuda médica", "es tu decisión", "hazlo y serás libre"
+]
