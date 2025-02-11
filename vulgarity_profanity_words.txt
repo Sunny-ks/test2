@@ -1,0 +1,46 @@
+vulgarity_profanity_words = [
+    # General Profanity & Swear Words
+    "mierda", "joder", "coño", "puta", "gilipollas", "cabron", "carajo", "hostia", "chingar", "chingada",
+    "chingón", "chingadera", "chingado", "huevón", "huevada", "pendejo", "pendejada", "pendeja", "pelotudo",
+    "tarado", "mamón", "pinche", "cabrón", "cabrona", "baboso", "babosa", "estúpido", "estúpida", "imbécil",
+    "bastardo", "desgraciado", "maldito", "hijo de puta", "perra", "perro", "zorra", "culero", "culera",
+    "soplapollas", "mierdoso", "mierdazo", "asqueroso", "asquerosa", "malparido", "cojones", "pelotudo", 
+    "pichón", "huevonazo", "caradura", "careculo", "careverga", "caremonda",
+
+    # Sexual Vulgarity
+    "verga", "vergazo", "polla", "pollón", "cuca", "chocha", "chichi", "teta", "tetona", "culo", "culazo",
+    "culito", "nalga", "nalgona", "nalgas", "pito", "pene", "mamada", "mamón", "chupapollas", "chupaverga",
+    "chupapija", "chupa pija", "coñazo", "tragasable", "cogida", "coger", "culear", "fornicar", "acostarse con",
+    "tirar", "desvirgar", "correrse", "corrida", "eyacular", "masturbar", "masturbación", "hacer el amor",
+    "sexo sucio", "porno", "pornografía", "pervertido", "sodomía", "sodomizar", "fetiche", "orgasmo",
+    "coito", "penetración", "sexo anal", "sexo oral", "chupar", "lamer", "esposar", "sado", "sadomasoquismo",
+    
+    # Homophobic & Offensive Slurs
+    "maricón", "marica", "maricote", "puto", "puta", "pervertido", "desviado", "travesti", "traga leche",
+    "sidoso", "joto", "mariquita", "mariquillo", "mariposón", "afeminado", "pajero", "pajillero", "tragasable",
+    "tortillera", "lesbiana de mierda", "maricón de mierda", "pasivo", "activo", "culo roto",
+
+    # Racist & Discriminatory Slurs
+    "negro de mierda", "cholo", "cholo de mierda", "indio", "indio de mierda", "negrazo", "moraco", "moro",
+    "moro de mierda", "sudaca", "sudamericano de mierda", "muerto de hambre", "gitano", "gitano de mierda",
+    "naco", "prieto", "prieto de mierda", "blanquito", "blanquito privilegiado", "chino", "chino de mierda",
+    "asiático de mierda", "cabecita negra", "mono", "macaco", "hispano de mierda", "hispanito", "mugroso",
+    "facho", "fascista de mierda", "nazista", "judío de mierda", "musulmán de mierda", "árabe terrorista",
+    "panchito", "latino de mierda",
+
+    # Religious Blasphemy & Profanity
+    "maldito dios", "dios de mierda", "maldita sea", "infierno", "diablo", "hijo del diablo", "blasfemia",
+    "me cago en dios", "me cago en la virgen", "me cago en cristo", "joder a dios", "maldito cristo",
+    "sacrilegio", "hijo de satanás", "satanista", "renegado de dios", "hereje", "maldito musulmán",
+    "maldito cristiano", "maldito judío", "pagano", "blasfemar",
+
+    # Insults & Offensive Expressions
+    "eres una mierda", "me cago en tu madre", "que te jodan", "que te follen", "vete a la mierda", "vete al infierno",
+    "chinga tu madre", "chinga a tu puta madre", "come mierda", "traga mierda", "traga pollas", "come vergas",
+    "hijo de perra", "hijo de la gran puta", "mal nacido", "basura humana", "cáncer de la sociedad",
+    "despojo humano", "sinvergüenza", "parásito", "mierda de persona", "saco de mierda", "cobarde de mierda",
+    "puta barata", "prostituta de mierda", "escort de pacotilla", "hijo de la chingada", "vago de mierda",
+    "imbécil de mierda", "estúpido de mierda", "retardado", "mongólico", "subnormal", "deficiente mental",
+    "mongol", "anormal", "idiota de mierda", "infeliz", "muerto de hambre", "huevonazo de mierda",
+    "pendejo de mierda", "baboso de mierda", "pobre diablo", "muerto de la vida"
+]
