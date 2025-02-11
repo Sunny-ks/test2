@@ -1,0 +1,75 @@
+spam_advertisement_words = [
+    # General Spam & Advertising
+    "oferta", "promoción", "descuento", "gratis", "envío gratis", "compra ahora", "edición limitada",
+    "solo por hoy", "última oportunidad", "reserva ahora", "precio especial", "precio reducido",
+    "compra ya", "stock limitado", "no te lo pierdas", "rebaja exclusiva", "venta rápida", "oferta única",
+    "oportunidad irrepetible", "ahorra dinero", "mejor precio", "exclusivo", "descuento del día",
+    "oferta relámpago", "super oferta", "2x1", "descuento imperdible", "compra segura", "ahorro garantizado",
+
+    # Clickbait & Engagement Bait
+    "haz clic aquí", "ver más", "descubre el secreto", "te sorprenderás", "no creerás lo que pasó",
+    "esto cambiará tu vida", "ver para creer", "mira esto ahora", "atención", "noticia impactante",
+    "esto es increíble", "debes verlo", "mira el video", "gana dinero fácil", "hazte rico rápido",
+    "no te lo vas a creer", "lo que nadie te contó", "sorprendente", "nunca visto antes",
+    "truco secreto", "truco revelado", "ganancias en segundos", "ver para creer", "información exclusiva",
+
+    # Scam & Fraudulent Advertising
+    "haz dinero fácil", "sin esfuerzo", "trabaja desde casa", "gana sin invertir", "oportunidad de negocio",
+    "sin experiencia", "solo por registrarte", "ingreso extra", "dinero rápido", "multiplica tu dinero",
+    "gana $100 al día", "sin riesgos", "inversión mínima", "hazte millonario", "trading seguro",
+    "aprovecha antes que acabe", "gana sin trabajar", "invierte con éxito", "negocio seguro",
+    "criptomoneda garantizada", "método infalible", "enriquece en días", "dinero garantizado",
+    "oferta exclusiva", "método probado", "aprovéchalo ya", "ingresos automáticos", "trabajo inmediato",
+
+    # Fake Products & Services
+    "producto milagroso", "cura inmediata", "cura natural", "pastillas mágicas", "adelgaza en días",
+    "pierde peso rápido", "sin ejercicio", "sin dieta", "blanquea tus dientes", "piel perfecta en días",
+    "sin efectos secundarios", "belleza instantánea", "píldora secreta", "secreto de los famosos",
+    "rejuvenece tu piel", "apariencia joven en minutos", "solución definitiva", "recupera tu cabello",
+    "cura secreta", "lo mejor para la salud", "recupera la vista", "remedio casero infalible",
+    "cura sin cirugía", "sin tratamiento médico", "solución 100% natural", "pruébalo gratis",
+    "sin pagar nada", "muestra gratuita", "sin efectos adversos", "solución definitiva",
+    "productos garantizados", "resultado inmediato",
+
+    # Email & Phishing Scams
+    "felicidades", "has ganado", "tu cuenta ha sido bloqueada", "verifica tu cuenta ahora",
+    "restablece tu contraseña", "actividad sospechosa detectada", "transacción no autorizada",
+    "recupera tu cuenta", "pago pendiente", "cobro inesperado", "factura impaga", "reclamación urgente",
+    "aviso importante", "seguridad comprometida", "confirma tus datos", "ganaste un iPhone",
+    "gana una laptop gratis", "sorteo exclusivo", "has sido seleccionado", "verificación necesaria",
+    "datos urgentes", "verifica tu cuenta", "última advertencia", "pago necesario", "haga clic para verificar",
+    "su cuenta ha sido suspendida", "restablecimiento urgente", "su contraseña ha expirado",
+    "evite la suspensión de su cuenta", "confirme su identidad", "ganador confirmado",
+    "su pago ha sido retenido", "problema con su tarjeta de crédito",
+
+    # Fake Customer Support & Impersonation
+    "soporte oficial", "ayuda técnica inmediata", "recuperación de cuenta", "problema con su cuenta",
+    "contacte a nuestro equipo", "resolvemos su problema", "evite el cierre de su cuenta",
+    "asistencia urgente", "hable con un representante", "actualización de datos requerida",
+    "seguridad de su cuenta", "atención personalizada", "soporte 24/7", "solicitud de datos",
+    "proteja su cuenta", "soporte prioritario", "ayuda inmediata", "recupere su acceso ahora",
+    "atención al cliente oficial", "mensaje importante de seguridad", "actualización necesaria",
+
+    # Social Media Spam & Fake Engagement
+    "seguidores gratis", "me gusta gratis", "comprar seguidores", "compra likes", "aumenta tus seguidores",
+    "más vistas en tu perfil", "viraliza tu cuenta", "haz crecer tu Instagram", "gana seguidores rápido",
+    "famoso en minutos", "suscriptores gratis", "mejora tu engagement", "red social optimizada",
+    "crecimiento instantáneo", "sube de nivel en redes", "engagement garantizado", "más interacciones",
+    "famoso en TikTok", "influencer al instante", "más comentarios", "triplica tu alcance",
+    "monetiza tu cuenta", "hack para más vistas", "secreto de influencers",
+
+    # Cryptocurrency & Investment Scams
+    "criptomoneda segura", "bitcoin gratis", "multiplica tu inversión", "ganancias garantizadas",
+    "inversión sin riesgos", "gana criptomonedas", "dinero fácil con trading", "cripto 100% segura",
+    "millones con trading", "sin experiencia en inversiones", "haz crecer tu fortuna", "plan de inversión secreta",
+    "compra bitcoin sin riesgo", "multiplica tu dinero sin esfuerzo", "cripto sin impuestos",
+    "trading infalible", "beneficios en horas", "compra cripto ahora", "incrementa tu dinero sin perder",
+    "cripto gratis solo por hoy", "inversión de alta rentabilidad",
+
+    # Fake Giveaways & Prizes
+    "gana un auto", "regalo especial", "solo por registrarte", "concurso exclusivo", "tu premio está listo",
+    "felicidades, ganaste", "sorteo sorpresa", "premio asegurado", "gran sorteo", "participa gratis",
+    "tu oportunidad de ganar", "elige tu premio", "descubre tu regalo", "bono de bienvenida",
+    "gana un iPhone ahora", "sorteo de Amazon", "tarjeta regalo gratis", "premios ocultos",
+    "bono sorpresa", "reclama tu recompensa"
+]
