@@ -1,0 +1,17 @@
+threat_words = [
+    "asesinar", "matar", "homicidio", "golpear", "apuñalar", "estrangular", "decapitar", "linchar", "tiroteo",
+    "disparar", "agresión", "crueldad", "represalia", "filo de cuchillo", "incendiar", "terrorismo", "explosión",
+    "bomba", "atentar", "bombardeo", "hacer estallar", "detonador", "explosivo", "coche bomba", "guerrilla",
+    "radicalizar", "aniquilar", "exterminio", "secuela de ataque", "infiltración", "ciberataque", "hackear",
+    "sabotaje", "conspiración", "desestabilizar", "radicalismo", "propaganda", "manipulación", "incitar",
+    "provocación", "secuestrar", "secuestrador", "rehenes", "extorsión", "chantaje", "terrorista", "ajusticiar",
+    "sentencia de muerte", "castigo", "persecución", "revolución", "guerra", "tráfico de armas", "delito",
+    "criminalidad", "sicario", "narcotráfico", "bandas armadas", "orden de ataque", "emboscada", "suicidio",
+    "agonía", "muerte inminente", "horror", "desgarrador", "desmembrar", "conmoción", "conmocionar", "vandalismo",
+    "radicalización", "desobediencia civil", "llamado a la violencia", "ataques físicos", "intento de homicidio",
+    "brutalidad", "amenazador", "amenazante", "amenazado", "amenaza", "terror", "intimidar", "miedo", "fuego cruzado",
+    "tiro", "fuego", "envenenar", "secuela", "desgarrar", "horroroso", "represión", "golpe", "armas", "crimen organizado",
+    "hostilidad", "represalias", "magnicidio", "aterrorizar", "caos", "hostil", "matanza",
+    "cuchillo", "navaja", "machete", "espada", "puñal", "daga", "hacha", "rifle", "pistola", "revólver",
+    "subfusil", "escopeta", "bazuca", "granada", "misil", "mortero", "dinamita"
+]
