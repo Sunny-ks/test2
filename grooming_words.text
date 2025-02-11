@@ -1,17 +1,72 @@
-threat_words = [
-    "asesinar", "matar", "homicidio", "golpear", "apuñalar", "estrangular", "decapitar", "linchar", "tiroteo",
-    "disparar", "agresión", "crueldad", "represalia", "filo de cuchillo", "incendiar", "terrorismo", "explosión",
-    "bomba", "atentar", "bombardeo", "hacer estallar", "detonador", "explosivo", "coche bomba", "guerrilla",
-    "radicalizar", "aniquilar", "exterminio", "secuela de ataque", "infiltración", "ciberataque", "hackear",
-    "sabotaje", "conspiración", "desestabilizar", "radicalismo", "propaganda", "manipulación", "incitar",
-    "provocación", "secuestrar", "secuestrador", "rehenes", "extorsión", "chantaje", "terrorista", "ajusticiar",
-    "sentencia de muerte", "castigo", "persecución", "revolución", "guerra", "tráfico de armas", "delito",
-    "criminalidad", "sicario", "narcotráfico", "bandas armadas", "orden de ataque", "emboscada", "suicidio",
-    "agonía", "muerte inminente", "horror", "desgarrador", "desmembrar", "conmoción", "conmocionar", "vandalismo",
-    "radicalización", "desobediencia civil", "llamado a la violencia", "ataques físicos", "intento de homicidio",
-    "brutalidad", "amenazador", "amenazante", "amenazado", "amenaza", "terror", "intimidar", "miedo", "fuego cruzado",
-    "tiro", "fuego", "envenenar", "secuela", "desgarrar", "horroroso", "represión", "golpe", "armas", "crimen organizado",
-    "hostilidad", "represalias", "magnicidio", "aterrorizar", "caos", "hostil", "matanza",
-    "cuchillo", "navaja", "machete", "espada", "puñal", "daga", "hacha", "rifle", "pistola", "revólver",
-    "subfusil", "escopeta", "bazuca", "granada", "misil", "mortero", "dinamita"
-]
+grooming_words = [
+    # Trust-Building & Friendship
+    "amigo", "amiga", "cariño", "confianza", "especial", "comprender", "escuchar", "ayuda",
+    "entiendo", "nadie te entiende", "eres diferente", "puedes confiar en mí", "siempre aquí",
+    "eres increíble", "me importas", "te quiero", "amigos para siempre", "hablamos en secreto",
+    "somos familia", "nadie nos entenderá", "te apoyo", "mejor amigo", "mejor amiga", "compañero",
+    "nadie nos puede separar", "eres mi favorito", "quiero conocerte más", "eres especial para mí",
+    
+    # Gaining Trust & Manipulation
+    "te protegeré", "no le digas a nadie", "nuestro secreto", "no te preocupes", "no tengas miedo",
+    "siempre estaré aquí", "nadie lo sabrá", "eres mi confidente", "guarda el secreto", "solo entre nosotros",
+    "los adultos no entienden", "prométeme que no dirás nada", "solo quiero ayudarte", "nunca te lastimaré",
+    "quiero lo mejor para ti", "puedes contar conmigo", "eres muy maduro", "eres más inteligente que los demás",
+    "confía en mí", "solo quiero hablar", "somos iguales", "no quiero lastimarte", "eres tan fuerte",
+    
+    # Isolation from Parents & Guardians
+    "tus padres no entienden", "ellos no te aman", "no pueden saberlo", "ellos te controlan",
+    "ellos no confían en ti", "no necesitas contarles", "nadie nos entendería", "te tratan como un niño",
+    "ellos son malos", "ellos no te comprenden", "ellos no te merecen", "no puedes confiar en ellos",
+    "ellos te juzgan", "solo yo te entiendo", "no quiero que sufras", "ven conmigo", "déjalos atrás",
+    
+    # Flattery & Compliments
+    "eres hermoso", "eres hermosa", "tienes lindos ojos", "tu cuerpo es increíble", "te ves increíble",
+    "eres perfecto", "eres perfecta", "me encantas", "qué guapo", "qué linda", "eres adorable",
+    "eres irresistible", "me haces feliz", "me gustas mucho", "te amo", "tu sonrisa es hermosa",
+    
+    # Sexual & Inappropriate Language
+    "sexy", "cuerpazo", "me calientas", "quiero verte desnudo", "quiero verte desnuda",
+    "quiero tocarte", "hazme un favor", "me excitas", "eres muy atractivo", "vamos a jugar un juego",
+    "eres mi amor", "déjame ver más", "envíame fotos", "sin ropa", "solo una foto", "nadie lo sabrá",
+    "quiero besarte", "te imagino en mi cama", "haz lo que te digo", "tómate una selfie", "no tengas miedo",
+    "eres tan maduro para tu edad", "quiero verte por video", "abre la cámara", "haz lo que te pido",
+    "solo para mí", "confía en mí", "nadie se enterará", "si me amas lo harás",
+    
+    # Coercion & Threats
+    "si me quieres, lo harás", "solo una vez", "no quiero lastimarte", "nadie tiene que saberlo",
+    "no quiero presionarte", "si me amas, confía en mí", "no te va a pasar nada", "no te preocupes, estoy aquí",
+    "nadie nos descubrirá", "hazlo por mí", "prométemelo", "solo una foto más", "no te delataré",
+    "si me dejas, sufriré", "si me bloqueas, me harás daño", "quiero sentirte", "solo un beso",
+    "solo quiero verte sin ropa", "no le digas a nadie, es nuestro secreto", "nos veremos pronto",
+    "envíame algo especial", "te haré sentir bien", "haz lo que te digo y seremos felices",
+    
+    # Grooming Games & Tricks
+    "juguemos a un juego", "juguemos a la verdad", "juguemos a ser novios", "haz lo que yo hago",
+    "hagamos algo divertido", "te reto a hacer algo", "vamos a hacer un trato", "si ganas, te digo un secreto",
+    "te apuesto algo", "solo por diversión", "nadie lo sabrá", "es un juego entre nosotros", "dame una sorpresa",
+    
+    # Secret Communication & Cover-Up
+    "borra los mensajes", "usa un perfil falso", "crea otra cuenta", "no uses tu nombre real",
+    "nadie sabrá quién eres", "haz un nuevo perfil", "usa una app secreta", "hablamos en otra red",
+    "usa un chat privado", "que nadie vea nuestro chat", "seamos discretos", "usa un alias",
+    "mándame mensajes cuando estés solo", "te llamaré en la noche", "espera a que todos duerman",
+    
+    # Persuasion & Emotional Manipulation
+    "eres diferente a los demás", "solo quiero hacerte feliz", "te haré sentir especial",
+    "nadie te comprende como yo", "eres increíblemente maduro", "quiero cuidarte", "no soy como los demás",
+    "nadie te amará como yo", "no quiero perderte", "te necesito", "solo quiero estar contigo",
+    "pienso en ti todo el tiempo", "eres mi razón de vivir", "sin ti, no soy nada", "no quiero que sufras",
+    "hazlo por mí", "si me amas, demuéstramelo", "serás mi secreto", "nadie te entenderá como yo",
+    "tú y yo contra el mundo", "seremos felices juntos", "sólo quiero verte feliz", "te extraño demasiado",
+    
+    # Pressure for Physical Contact or Meeting
+    "quiero verte en persona", "cuando podemos vernos", "hagamos un plan", "nos encontraremos pronto",
+    "te recojo", "dime dónde vives", "quiero abrazarte", "nos veremos en secreto", "quiero estar contigo",
+    "necesito tocarte", "hagamos algo divertido juntos", "solo ven conmigo", "te llevaré a un lugar especial",
+    "hazlo por mí, no te arrepentirás", "sólo quiero verte una vez", "ven a mi casa", "estarás seguro conmigo",
+    "solo quiero cuidarte", "te prometo que no pasará nada", "nadie nos encontrará", "te amo demasiado para perderte",
+    
+    # Threats & Fear Inducing Tactics
+    "si dices algo, te meterás en problemas", "no puedes contárselo a nadie", "nadie te creerá",
+    "haré que te arrepientas", "tu familia sufrirá", "tengo tus fotos", "no puedes escaparte de mí",
+    "te vigilo", "nadie puede protegerte", "si hablas, lo perderás todo", "haz lo que te digo o sufrirás"
