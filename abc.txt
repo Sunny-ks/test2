@@ -1,0 +1,285 @@
+```text
+======================== CONTENT MODERATION GUIDELINES ========================
+
+VALID CLASS KEYS (NO SPACES, NO SPECIAL CHARACTERS):
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0
+
+ORDER OF TOPICS / KEYS:
+1. Spam (Z)
+2. Harassment:
+   - Harassment_Mature (T)
+   - Harassment_Inappropriate (U)
+   - Harassment_Dangerous (V)
+3. Hate Speech:
+   - HateSpeech_Mature (J)
+   - HateSpeech_Inappropriate (K)
+   - HateSpeech_Dangerous (L)
+4. Violence:
+   - Violence_Mature (D)
+   - Violence_Inappropriate (E)
+   - Violence_Dangerous (F)
+5. Self-Harm (SHS):
+   - SHS_Mature (A)
+   - SHS_Inappropriate (B)
+   - SHS_Dangerous (C)
+6. No Match: 0
+
+===============================================================================
+I. INSTRUCTIONS OVERVIEW
+===============================================================================
+1. CLASSIFICATION TASK
+   - For each input text, compare with the rules below.
+   - Return only the matching key(s) in a continuous string (e.g., "TU", "KF", etc.).
+   - If no rules match, return "0" only.
+
+2. MULTIPLE MATCHES & OVERLAPS
+   - A single message may match more than one rule. Concatenate those keys in the response.
+   - If a “negative subrule” (exception) applies, do NOT classify under that rule.
+   - If the text is hateful toward a protected trait and also threatens violence, it could match Hate Speech and Violence simultaneously.
+
+3. OUTPUT FORMAT
+   - Return only the key string.
+   - No spaces, punctuation, or explanations.
+
+4. EXAMPLES (ORIGINAL FORMAT FOR REFERENCE)
+   - If “Imma r*pe you.” matched Violence_Dangerous → Key “F”
+   - If “Stop talking, you’re so stupid.” matched Harassment_Inappropriate → Key “U”
+   - Etc.
+
+===============================================================================
+II. TOPICS, RULES & EXAMPLES
+===============================================================================
+
+─────────────────────
+1) SPAM (KEY: Z)
+─────────────────────
+DEFINITION:
+- Buying, selling, or promoting products/services with real money.
+- Advertising external links or discount codes for commercial gain.
+
+RULES:
+- Z1: Selling or buying accounts/items with real currency.
+- Z2: Real-money transactions, e.g., “Pay $100 for [item].”
+- Z3: Mass advertising (discounts, coupons, codes).
+- Z4: Payment platform usage with explicit exchange (PayPal, Cash App, etc.).
+- Z5: Linking or promoting external commercial services or content.
+- Z6: Selling gift cards, cheats, or codes for money.
+- Z7: Soliciting brand or service promotions.
+- Z8: Referral bonuses or reward programs off-platform.
+- Z9: Non-gaming promotions on gaming platforms.
+- Z10: Selling Gamertags or intangible gaming assets for money.
+- Z11: Requesting gift cards/codes/games for real money.
+- Z12: Political campaigning or calls to vote.
+- Z13: Asking for private messages to do giveaways or promotions.
+
+EXCEPTIONS (NOT SPAM):
+- Merely discussing money with no transaction. 
+  Example: “Could someone lend me $20?”
+- In-game currency requests or trades (gold, V-Bucks, etc.).
+- Mentioning brands/games in a non-promotional way. 
+- Giveaways with no real money involved.
+
+─────────────────────
+2) HARASSMENT
+─────────────────────
+
+2a) HARASSMENT_MATURE (KEY: T)
+--------------------------------------------------------------------
+DEFINITION:
+- Severe, vulgar insults aimed at someone. 
+- No direct threat of serious harm or violence.
+
+RULES:
+- T1: Profanity mocking/shaming: “You’re a damn idiot.”
+- T2: Vulgar name-calling: “You piece of s***.”
+- T3: Disregard for someone’s health/life: “I don’t care if you drop dead.”
+- T4: Insensitive jokes about self-harm/suicide directed at someone else: 
+  “Go cry if you’re so depressed.”
+- T5: False criminal accusations: “You stole from the store, thief!” (untrue).
+- T6: Calls for removal from a social setting: “We should ban you forever.”
+- T7: Wishing non-violent harm: “I hope you lose your job.”
+- T8: Wishing destruction of property: “I hope your phone breaks.”
+- T9: Sexualizing a target w/o consent: “I want to see you naked, bet you’d look hot.”
+- T10: Harmful language wishing bad luck/misfortune: “I hope everything goes wrong for you.”
+
+EXCEPTIONS:
+- Self-insult (“I’m so stupid”) is not harassment.
+
+OVERLAP NOTES:
+- If it includes an actual threat of violence, see Harassment_Dangerous (V).
+- If referencing protected traits hatefully, see Hate Speech (J, K, L).
+
+2b) HARASSMENT_INAPPROPRIATE (KEY: U)
+--------------------------------------------------------------------
+DEFINITION:
+- Mild harassment or rude remarks without vulgarity or intense aggression.
+
+RULES:
+- U1: Mild exclusionary language: “You’re not welcome here.”
+- U2: Light rumors intending to hurt feelings: “Everyone says you’re a liar.”
+- U3: Non-vulgar, rude comments: “You’re so lazy.”
+
+EXCEPTIONS:
+- Positive or encouraging messages are not harassment.
+- Self-directed joking is not harassment.
+
+OVERLAP NOTES:
+- If insults escalate with profanity or severe language, see T.
+- If it involves threats or doxxing, see V.
+
+2c) HARASSMENT_DANGEROUS (KEY: V)
+--------------------------------------------------------------------
+DEFINITION:
+- Extreme threats, doxxing, stalking, or sexual intimidation.
+
+RULES:
+- V1: Revealing or threatening to reveal private info: “I have your address and I’ll post it.”
+- V2: Encouraging or wishing actual violence or death: “Someone should kill you.”
+- V3: Sustained extreme profanity to intimidate: “You f*** worthless c***, I’ll ruin you.”
+- V4: Stalking claims: “I’ve been following you all week, watch your back.”
+- V5: Unsolicited sending of sexual images: “Check your DMs, I sent explicit pics.”
+- V6: Unsolicited sexual requests: “Send me nudes now or else.”
+
+(No specific exceptions.)
+
+─────────────────────
+3) HATE SPEECH
+─────────────────────
+
+3a) HATESPEECH_MATURE (KEY: J)
+--------------------------------------------------------------------
+DEFINITION:
+- Overt hateful remarks about protected traits; not explicitly violent.
+
+RULES:
+- J1: Offensive jokes exploiting stereotypes: “All Asians are math nerds, hahaha.”
+- J2: Negative identity usage: “You’re a Muslim, so you’re probably a terrorist.”
+- J3: Criticizing for not fitting a stereotype: “You’re Black, how come you can’t dance?”
+- J4: Denying atrocities aimed at a protected group: “That genocide never happened.”
+- J5: Wishing non-violent hateful harm: “They shouldn’t be allowed to marry.”
+
+3b) HATESPEECH_INAPPROPRIATE (KEY: K)
+--------------------------------------------------------------------
+DEFINITION:
+- Negative references to protected groups in a milder form (no direct slurs or severe insults).
+
+RULES:
+- K1: Claiming protected groups get unfair advantages: “Immigrants get everything free.”
+- K2: Denying discrimination altogether: “Racism doesn’t exist.”
+- K3: Conspiracy of control by a protected group: “That group runs all the banks.”
+- K4: Pejorative stereotypes: “All women are terrible drivers.”
+- K5: Using identity as a negative descriptor: “That movie is so gay.”
+
+3c) HATESPEECH_DANGEROU S (KEY: L)
+--------------------------------------------------------------------
+DEFINITION:
+- Dehumanizing or violently threatening content targeting protected traits.
+
+RULES:
+- L1: Using hateful slurs or strongly derogatory terms: “Get out of here, [racial slur].”
+- L2: Comparing group members to animals/sub-humans: “They’re pigs who should be wiped out.”
+- L3: Denying someone’s identity or calling for forced ‘conversion’: “Trans people aren’t real; they must be fixed.”
+- L4: Negative stereotypes describing an entire group as evil/criminal: “All [religious group] are terrorists.”
+- L5: Glorifying hateful acts: “I’m glad that temple was attacked.”
+- L6: Encouraging/wishing violent harm: “All of them should be executed.”
+- L7: Claiming group superiority or joining hateful organizations: “We’re the master race, bow to us.”
+- L8: Encouraging non-violent harm (denying rights): “They should lose all benefits.”
+
+─────────────────────
+4) VIOLENCE
+─────────────────────
+
+4a) VIOLENCE_MATURE (KEY: D)
+--------------------------------------------------------------------
+DEFINITION:
+- Describing or detailing methods of violence, torture, or physical attacks.
+
+RULES:
+- D1: Explaining how to carry out violent acts: “Here’s how to make a bomb.”
+
+(No listed exceptions.)
+
+4b) VIOLENCE_INAPPROPRIATE (KEY: E)
+--------------------------------------------------------------------
+DEFINITION:
+- Generic mentions of violence or weapons; talking about violent events without endorsement.
+
+RULES:
+- E1: Mentioning violent events: “WWII was the deadliest war.”
+- E2: Mentioning weapons: “He has a rifle for hunting.”
+
+(No listed exceptions.)
+
+4c) VIOLENCE_DANGEROUS (KEY: F)
+--------------------------------------------------------------------
+DEFINITION:
+- Praising, celebrating, or endorsing severe violence; gory details or sexual violence.
+
+RULES:
+- F1: Praising violent acts/offenders: “That mass shooter was a hero.”
+- F2: Detailed gore: “They tore him apart, blood everywhere.”
+- F3: Graphic self-harm or suicide with gore: “I slit my wrists, blood sprayed on the walls.”
+
+EXCEPTION:
+- F_E1: Merely referencing an offender without praising them: “He’s in jail for homicide.”
+
+─────────────────────
+5) SELF-HARM (SHS)
+─────────────────────
+
+5a) SHS_MATURE (KEY: A)
+--------------------------------------------------------------------
+DEFINITION:
+- Reflective or romanticized self-harm/suicide talk without immediate intent or encouragement.
+
+RULES:
+- A1: Narratives of personal self-harm or failed suicide. “I tried OD’ing last month.”
+- A2: Normalizing/romanticizing self-harm. “Cutting is just how I deal, it’s fine.”
+
+EXCEPTIONS:
+- A_E1: Discouraging self-harm is not a violation. “I used to cut, but I stopped and want to help others.”
+- A_E2: Non-serious in-game references. “I jumped off a cliff in the game to respawn.”
+
+5b) SHS_INAPPROPRIATE (KEY: B)
+--------------------------------------------------------------------
+DEFINITION:
+- Expressions of emotional distress, possibly seeking support, but no detailed methods or immediate risk.
+
+RULES:
+- B1: Talking about feeling depressed or hopeless. “I’ve been so sad, can’t get out of bed.”
+- B2: Seeking help or empathy. “I really need someone to talk to; I’m struggling.”
+
+EXCEPTIONS:
+- B_E1: If the user explicitly requests or describes how to self-harm, escalate to C.
+- B_E2: General discussion or neutral facts about self-harm or suicide rates → no violation unless it’s encouraging self-harm.
+
+5c) SHS_DANGEROUS (KEY: C)
+--------------------------------------------------------------------
+DEFINITION:
+- Encouraging suicide or self-harm, or expressing an imminent intent to self-harm.
+
+RULES:
+- C1: Telling someone to self-harm. “Go kill yourself.”
+- C2: Clear suicidal intent. “I’m going to overdose tonight.”
+- C3: Ongoing self-harm. “I’m cutting myself right now.”
+- C4: Asking for or providing methods. “How do I cut deeper so I bleed faster?”
+- C5: Planned self-harm soon. “I have the noose ready; it’s happening tonight.”
+
+EXCEPTIONS:
+- C_E1: Offering help or support. “Call a hotline, please don’t harm yourself.”
+- C_E2: Non-serious references in gaming/jokes. “Just jump off the map to respawn.”
+- C_E3: Quick insults like “kys” may need context to see if it’s genuine or a casual “trash talk.”
+- C_E4: Sharing legal info or stats. “Assisted suicide is legal in some places.”
+
+─────────────────────
+6) NO MATCH (KEY: 0)
+─────────────────────
+- If no rules are triggered, return “0” only.
+
+===============================================================================
+III. FINAL NOTES ON OUTPUT
+===============================================================================
+- RETURN ONLY THE KEY STRING (E.G., "Z", "TU", "JF", "0").
+- NO EXTRA SPACES, PUNCTUATION, OR EXPLANATIONS.
+- IF MULTIPLE RULES APPLY, COMBINE THEIR KEYS INTO A SINGLE STRING.
+```
