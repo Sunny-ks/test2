@@ -1,0 +1,53 @@
+Below is a concise way to see how **Public Threat vs. Violence** and **Harassment vs. Hate Speech** differ across three severity levels (Inappropriate / Mild, Mature / Moderate, and Dangerous / Severe).
+
+---
+
+## 1. Public Threat vs. Violence
+
+### **Inappropriate (Mild)**
+- **Public Threat**: Vague or indirect references to harm toward a public entity, but not clearly stated as a plan or intention.  
+  > Example: “Someone ought to do something about City Hall…” (no direct threat).
+- **Violence**: General or neutral mention of violent events or weapons without praise or instructions.  
+  > Example: “World War II caused millions of deaths.”
+
+### **Mature (Moderate)**
+- **Public Threat**: More direct mention of harming a larger group or place, though possibly without explicit details.  
+  > Example: “I could shut down that concert if I wanted to.”  
+- **Violence**: Detailing methods or discussing how to carry out violent acts, but not necessarily praising them.  
+  > Example: “Here’s how you could break into someone’s car.”
+
+### **Dangerous (Severe)**
+- **Public Threat**: Explicit threat aimed at a public location or group with intent to cause alarm or mass harm.  
+  > Example: “I’m going to bomb the stadium tomorrow; everyone will suffer.”  
+- **Violence**: Praising or encouraging serious violence, describing extreme gore, or endorsing lethal harm.  
+  > Example: “That mass shooter was a hero—wish more people would do the same.”
+
+---
+
+## 2. Harassment vs. Hate Speech
+
+### **Inappropriate (Mild)**
+- **Harassment**: Non-vulgar personal insults, mild exclusion, or rumors targeting an individual’s personal traits or behavior.  
+  > Example: “You’re so lazy, nobody wants you around.”  
+- **Hate Speech**: Mild negative references or stereotypes about a protected group, but not severe slurs or calls for harm.  
+  > Example: “Women can’t drive.”
+
+### **Mature (Moderate)**
+- **Harassment**: Vulgar name-calling, profane insults, or wishes of misfortune directed at someone (no explicit threat of harm).  
+  > Example: “You’re a stupid piece of trash, I hope you lose your job.”  
+- **Hate Speech**: Strongly offensive or demeaning language about a protected group, but not explicitly calling for violence.  
+  > Example: “All [religious group] are terrorists, and I’m sick of them.”
+
+### **Dangerous (Severe)**
+- **Harassment**: Threats of physical harm, doxxing, stalking, or sexual coercion targeting an individual.  
+  > Example: “I’m going to find you and beat you up.”  
+- **Hate Speech**: Dehumanizing or explicitly violent statements directed at a protected group, calling for physical harm or endorsing hate-fueled violence.  
+  > Example: “We should round up all [racial slur] and get rid of them.”
+
+---
+
+**Key Takeaways**  
+- A **public threat** typically involves threatening harm to a large audience or public place; it becomes *dangerous* when explicitly detailing or promising that harm.  
+- **Violence** focuses on describing, endorsing, or celebrating harmful acts (at varying levels of detail or severity).  
+- **Harassment** targets an individual (or individuals) personally, without referencing a protected characteristic.  
+- **Hate Speech** attacks or demeans someone *because* of a protected trait, escalating from stereotypes to overt calls for violence.
