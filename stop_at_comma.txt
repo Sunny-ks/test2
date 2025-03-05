@@ -1,0 +1,61 @@
+Great question! Let’s break it down step by step. 🔍
+
+---
+
+### **How Autoregressive Models Generate Tokens**
+Your **fine-tuned Mistral v0.3 model** generates text **one token at a time** in an **autoregressive manner**. This means that:
+1. It **predicts the next token** based on the input and previously generated tokens.
+2. Each token is chosen based on the probability distribution over the vocabulary, given the past context.
+
+Since you trained the model on `"Label, explanation"`, it has **learned** that:
+- The **first part** should be the **correct label**.
+- The **second part** (after `,`) should contain an **explanation**.
+
+---
+
+### **What Happens During Inference?**
+When you prompt the model and stop generation **at the comma**, the model **still internally reasons** about why it is choosing a specific label.
+
+Here's what happens:
+1. The model processes your input **in full** (system prompt + user query).
+2. It computes **hidden states** that capture contextual information from fine-tuning.
+3. When generating the first token (the **label**), it has already **implicitly considered the explanation** because it was fine-tuned to expect one.
+
+💡 **Key Insight:**  
+- The model **does not blindly pick a label**—it selects `"A"` with an **understanding** of why `"A"` is the correct answer.
+- However, since decoding is **stopped at the comma**, you just don’t get to see the explanation that influenced that decision.
+
+---
+
+### **Analogy: Choosing an Answer Without Justifying It**
+Think of a multiple-choice test where you're asked:
+
+> **Question:** What is the best classification for this review?  
+> a) Positive  
+> b) Negative  
+> c) Neutral  
+
+If someone trained you to **always provide an answer + justification**, you might think:
+> "The review contains words like 'excellent' and 'fantastic,' so the sentiment is clearly positive. I’ll write: Positive, because the words indicate strong approval."
+
+But now, imagine you are told:
+> "Just give the answer. Stop writing after the first comma."
+
+Even though you **only write** "Positive," your brain **still processed the full reasoning** before choosing it.
+
+This is exactly what happens in your model! 🧠✨
+
+---
+
+### **Why This Works in Your Case**
+- **Fine-tuning taught the model** that after the label, an explanation should follow.
+- **During inference, it still reasons about the explanation**, even though it doesn’t get to output it.
+- **Stopping at the comma doesn’t prevent reasoning—just prevents decoding beyond that point.**
+
+---
+
+### **Final Thought**
+Your model isn't "guessing" the label without understanding.  
+It is **selecting the label based on its learned knowledge**, which includes the reasoning—it's just that you don't let it output the reasoning in text.
+
+Would you like me to run an experiment to verify this behavior using log probabilities? 🚀
