@@ -1,0 +1,34 @@
+### **Simple Explanation: How Hidden States Differ in These Two Cases**
+
+Think of the **hidden state** as the **internal thought process** of the model before it decides what to generate next.
+
+---
+
+### **Case 1: Training to Generate Only the Label**
+- If the model is fine-tuned to generate **only the label**, its hidden states are optimized **only** for classifying the input.  
+- It **never learns** to predict explanations, so it focuses on **just picking the right label** based on past patterns.
+
+💡 **Effect:**  
+- The hidden state only encodes **label selection** logic.
+- No representation of **why** the label is correct.
+
+---
+
+### **Case 2: Training on "Label, Explanation" but Stopping at Comma**
+- If the model is fine-tuned to generate `"Label, explanation"`, its hidden states capture:
+  1. **Why the label is correct** (explanation reasoning).
+  2. **What the correct label should be**.
+  3. **That a comma will come next, followed by reasoning.**
+
+💡 **Effect:**  
+- The hidden state before generating `"Label"` already contains information about the explanation.
+- The label is selected **knowing that an explanation must follow**.
+- Even if inference stops at the comma, the hidden state is **more informed** than in Case 1.
+
+---
+
+### **Key Difference**  
+- **Training to output only the label** → Model doesn’t consider explanations at all.  
+- **Training to output "Label, Explanation" but stopping at the comma** → The model **still reasons about the explanation** before picking the label, even if the explanation isn’t generated.
+
+This is why **your current method works better** than just training for the label alone—it allows the model to make a **more informed decision** on the label, even if you don’t decode the reasoning. 🚀
