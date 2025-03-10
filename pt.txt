@@ -1,0 +1,375 @@
+public_threat_extremism_words_pt = [
+    # General Threats
+    "ameaça", "intimidação", "coerção", "opressão", "submissão", "chantagem", "perseguição", "ataque", 
+    "violência", "agressão", "hostilidade", "abuso", "tortura", "represália", "subversão", "conspiração",
+    "revolta", "rebelião", "insurreição", "anarquia", "distúrbio", "confusão", "caos", "terror",
+
+    # Extremism & Radicalization
+    "extremismo", "radicalização", "fanatismo", "militância radical", "fundamentalismo", "sectarismo", 
+    "doutrinação", "pregação extremista", "propaganda extremista", "grupo radical", "movimento radical",
+    "incitação ao ódio", "incitação à violência", "recrutamento extremista", "infiltração radical",
+    
+    # Terrorism & Terrorist Activities
+    "terrorismo", "terrorista", "atentado", "explosão", "bomba", "homem-bomba", "célula terrorista",
+    "rede terrorista", "planejamento terrorista", "financiamento terrorista", "ação armada",
+    "execução de ataques", "ataque suicida", "extremismo violento", "crimes de ódio",
+    "agressão terrorista", "facção extremista", "domínio terrorista", "refém", "sequestro",
+    
+    # Armed Conflict & Violence
+    "guerra", "conflito armado", "batalha", "emboscada", "tiroteio", "arma de fogo", "arma branca",
+    "explosivos", "disparo", "fogo cruzado", "invasão armada", "ocupação forçada", "assalto",
+    "incêndio criminoso", "massacre", "genocídio", "extermínio", "aniquilação", "exclusão forçada",
+    
+    # Weapons & Explosives
+    "pistola", "revólver", "rifle", "espingarda", "arma automática", "granada", "bomba caseira",
+    "bomba improvisada", "c4", "minas terrestres", "míssil", "lança-chamas", "gás tóxico",
+    "arma nuclear", "arma biológica", "arma química", "arma de destruição em massa", "drones armados",
+    
+    # Cyber Threats & Online Extremism
+    "ciberataque", "hacktivismo", "terrorismo cibernético", "ransomware", "roubo de dados", 
+    "phishing", "manipulação de informação", "desinformação", "propaganda online", "ameaça digital",
+    "invasão de privacidade", "hackeamento de sistemas", "espionagem online", "fraude cibernética",
+    "chantagem digital", "ameaças anônimas online", "vazamento de dados confidenciais",
+    
+    # Organized Crime & Illegal Activities
+    "tráfico de drogas", "tráfico de armas", "contrabando", "lavagem de dinheiro", 
+    "fraude financeira", "corrupção", "extorsão", "sequestro", "assassinato contratado",
+    "sindicatos do crime", "mafia", "quadrilha", "gangue criminosa", "execução sumária",
+    "recrutamento criminoso", "mercado negro", "comércio ilegal", "extorsão de empresas",
+    
+    # Hate Speech & Discrimination
+    "discurso de ódio", "xenofobia", "racismo", "supremacia branca", "discriminação religiosa",
+    "homofobia", "islamofobia", "antisemitismo", "estereótipos culturais", "ataques discriminatórios",
+    "desumanização", "incitação à violência étnica", "preconceito", "difamação", "humilhação pública",
+    "intolerância religiosa", "agressão verbal", "injúria racial", "ameaça à integridade cultural",
+    
+    # Political Extremism
+    "radicalismo político", "revolucionário violento", "insurgente", "opositor armado",
+    "movimento separatista", "ditadura", "autoritarismo", "militarização", "golpe de estado",
+    "subversão política", "propaganda autoritária", "repressão política", "injustiça social",
+    "campanha violenta", "ataque à democracia", "corrupção governamental", "violência contra opositores",
+    
+    # Social & Domestic Threats
+    "violência doméstica", "violência contra mulheres", "agressão infantil", "abuso de poder",
+    "ameaça doméstica", "coerção familiar", "agressão entre vizinhos", "ameaça comunitária",
+    "brigas de gangues", "delinquência juvenil", "assédio sexual", "ameaça contra minorias",
+    "violência policial", "tortura psicológica", "ameaça verbal", "intimidação social",
+    
+    # Illegal Protests & Riots
+    "manifestação violenta", "tumulto", "protesto armado", "rebelião pública", "distúrbio civil",
+    "bloqueio de estradas", "danos públicos", "vandalismo urbano", "ataques contra propriedades",
+    "quebra-quebra", "depredação", "invasão de prédios públicos", "ocupação ilegal", "desobediência civil violenta",
+    "agressão durante protesto", "subversão de ordens públicas", "intimidação a autoridades",
+    
+    # Miscellaneous Threats
+    "ameaça de bomba", "ameaça terrorista", "ameaça velada", "ameaça de morte", 
+    "ameaça pública", "ameaça anônima", "ameaça cibernética", "ameaça em massa",
+    "manipulação de massas", "propagação de mentiras", "campanha de desinformação",
+    "terror psicológico", "propagação de medo", "ameaça de ataques coordenados",
+    "ameaça de invasão", "medo coletivo", "propagação de rumores",
+    "campanha de ódio online", "incitação a rebelião", "desestabilização social"
+]
+
+sexual_exploitation_words_pt = [
+    # General Sexual Exploitation
+    "exploração sexual", "abuso sexual", "assédio sexual", "violência sexual", "coerção sexual",
+    "assédio online", "chantagem sexual", "tráfico sexual", "prostituição forçada", "pornografia ilegal",
+    "pornografia infantil", "material explícito ilegal", "distribuição de conteúdo sexual ilegal",
+    "captação de menores para fins sexuais", "sedução de menores", "abusador sexual", "predador sexual",
+    "abuso de confiança para fins sexuais", "exploração digital", "chantagem com fotos íntimas",
+
+    # Grooming & Online Exploitation
+    "grooming", "manipulação online", "coerção online", "ameaça digital", "sexting forçado",
+    "compartilhamento não consensual de conteúdo", "exposição forçada", "abusador online",
+    "perseguição digital", "chantagem online", "difusão não autorizada de imagens íntimas",
+    "acesso não autorizado a fotos íntimas", "extorsão sexual online", "vídeos íntimos vazados",
+    "ameaça de divulgação", "coerção para envio de imagens íntimas", "ameaça com conteúdo explícito",
+
+    # Child Exploitation & Abuse
+    "abuso infantil", "exploração infantil", "material de abuso infantil", "pornografia infantil",
+    "exposição de menores", "distribuição de imagens de menores", "captação de menores",
+    "aliciamento de menores", "contato sexual com menores", "compartilhamento de fotos de menores",
+    "coerção de menores para fins sexuais", "ameaça a menores", "ameaça de abuso infantil",
+    "abusador de crianças", "rede de pedofilia", "tráfico de menores para exploração sexual",
+    "vídeos de abuso infantil", "chantagem sexual com menores", "extorsão de menores",
+    "material pornográfico infantil ilegal",
+
+    # Prostitution & Sex Trafficking
+    "prostituição infantil", "tráfico de seres humanos", "tráfico de mulheres", "prostituição forçada",
+    "escravidão sexual", "trabalho sexual forçado", "captação de mulheres para exploração sexual",
+    "compra de favores sexuais", "extorsão para prostituição", "tráfico internacional de mulheres",
+    "tráfico de menores", "redes de exploração sexual", "recrutamento forçado para prostituição",
+    "aliciamento para fins sexuais", "vídeo de prostituição ilegal", "compartilhamento de conteúdo explícito de forma ilegal",
+    "agência de prostituição ilegal", "tráfico de pessoas para exploração sexual",
+
+    # Revenge Porn & Non-consensual Content
+    "porno de vingança", "divulgação não autorizada", "ameaça de divulgação de imagens íntimas",
+    "chantagem com vídeos íntimos", "divulgação de fotos íntimas sem consentimento",
+    "exposição pública de conteúdo íntimo", "vídeos íntimos vazados", "ameaça de divulgar conteúdo íntimo",
+    "chantagem com fotos vazadas", "compartilhamento de conteúdo explícito sem permissão",
+    "publicação não autorizada de vídeos íntimos", "ameaça de exposição sexual", "exposição forçada",
+    "difamação com conteúdo íntimo", "divulgação de material privado sem consentimento",
+    "invasão de privacidade sexual", "ameaça de publicar conteúdo privado", "publicação de fotos íntimas roubadas",
+
+    # Cyber Exploitation & Digital Harassment
+    "abuso digital", "chantagem digital", "vídeos manipulados", "deepfake pornográfico",
+    "criação de imagens íntimas falsas", "ameaça de publicar conteúdo manipulado",
+    "perseguição online", "chantagem por redes sociais", "acesso não autorizado a fotos íntimas",
+    "roubo de conteúdo sexual", "divulgação não autorizada de dados pessoais íntimos",
+    "invasão de privacidade online", "abusador digital", "ameaça cibernética de divulgação",
+    "extorsão cibernética", "vazamento de dados íntimos", "ameaça de divulgar conteúdo sexual online",
+    "publicação não autorizada de imagens privadas", "chantagem sexual via internet",
+    "exposição sexual via redes sociais",
+
+    # Illegal Marketplaces & Distribution
+    "venda de conteúdo explícito ilegal", "compra de vídeos pornográficos ilegais",
+    "distribuição de pornografia ilegal", "mercado negro de conteúdo sexual",
+    "distribuição de fotos de menores", "tráfico de conteúdo sexual ilegal",
+    "rede de venda de imagens explícitas", "plataforma ilegal de conteúdo sexual",
+    "comércio de imagens íntimas roubadas", "mercado de pornografia ilegal",
+    "distribuição de conteúdo sexual forçado", "compartilhamento de vídeos explícitos roubados",
+    "negócio ilegal de pornografia infantil", "venda de vídeos de abuso sexual",
+    "tráfico digital de conteúdo íntimo", "plataforma de conteúdo explícito ilegal",
+    "distribuição de material de abuso infantil", "armazenamento ilegal de conteúdo sexual",
+    "compartilhamento ilegal de conteúdo sexual privado", "troca de fotos íntimas ilegais",
+
+    # Miscellaneous Exploitation
+    "abuso de confiança para fins sexuais", "perseguição por motivos sexuais",
+    "ameaça com imagens íntimas falsas", "intimidação sexual digital", "revelação não autorizada de imagens íntimas",
+    "manipulação emocional para abuso sexual", "ameaça de exposição digital", "ameaça de exposição pública",
+    "chantagem com conteúdo comprometedor", "ameaça de publicar fotos íntimas",
+    "compartilhamento forçado de conteúdo íntimo", "divulgação de vídeos íntimos roubados",
+    "venda de conteúdo sexual não autorizado", "invasão de privacidade para fins de chantagem",
+    "roubo de fotos íntimas para extorsão", "ameaça de vazamento de dados íntimos",
+    "chantagem por fotos roubadas", "exposição pública não consentida",
+    "difamação com vídeos íntimos", "chantagem para favores sexuais"
+]
+
+vulgarity_profanity_words_pt = [
+    # General Profanity
+    "caralho", "merda", "foda-se", "puta que pariu", "filho da puta", "porra", "cacete", "vai tomar no cu", "puta",
+    "bosta", "desgraça", "arrombado", "babaca", "corno", "otário", "imbecil", "idiota", "bocó", "pilantra",
+    "vagabundo", "safado", "canalha", "escroto", "desgraçado", "maldito", "miserável", "cretino", "estúpido",
+    "burro", "animal", "anta", "jumento", "asno", "cavalo", "mula", "porco", "sujo", "nojento", "repugnante",
+    "asqueroso", "escória", "lixo", "merdinha", "cagão", "cuzão", "palerma", "panaca", "trouxa", "mané", "zé ruela",
+    
+    # Sexual Vulgarity
+    "pica", "rola", "pau", "buceta", "xereca", "xota", "periquita", "cona", "grelo", "clitóris", "mamilo",
+    "teta", "peito", "pênis", "vagina", "gozar", "foder", "trepar", "comer", "sacanagem", "putaria", "safadeza",
+    "sacanear", "chupeta", "chupar", "lamber", "encoxar", "gozo", "ejaculação", "mamada", "boquete", "piração",
+    "sexo sujo", "nude", "nudes", "peladão", "pornô", "pornografia", "pegação", "padrão pornô",
+    
+    # Insults and Name Calling
+    "palhaço", "imbecil", "burro", "idiota", "analfabeto", "trouxa", "besta", "inútil", "tolo", "otário",
+    "escroto", "cretino", "sem noção", "patético", "cagão", "lerdo", "mole", "covarde", "asno", "antissocial",
+    "repulsivo", "ridículo", "bronco", "monstro", "marginal", "trapaceiro", "preguiçoso", "mentiroso",
+    "pessoa inútil", "doente", "bestalhão", "maluco", "inválido", "cretino", "babaca", "traste", "nojento",
+    "zé ninguém", "nada", "zero à esquerda", "imprestável", "corno", "gado", "manso", "mané", "bicho do mato",
+    
+    # Blasphemy and Religious Profanity
+    "maldito seja", "maldição", "diabo", "demônio", "satanás", "inferno", "mefistófeles", "amaldiçoado",
+    "blasfêmia", "sacrilegio", "ateu de merda", "pagão", "ímpio", "maldito por Deus", "vai para o inferno",
+    "blasfemador", "pecador de merda", "profanador", "herege", "antichrist", "profanação",
+    
+    # Offensive Slurs
+    "retardado", "idiota", "imbecil", "múmia", "morto-vivo", "câncer social", "verme", "parasita", "doente",
+    "racista de merda", "escória humana", "babaca social", "degenerado", "doente mental", "misógino",
+    "machista de merda", "homofóbico nojento", "fascista nojento", "antissemita desgraçado", "pervertido",
+    "tarado sexual", "nojento depravado", "doente sexual", "marginal",
+    
+    # Racist and Discriminatory Slurs
+    "negro imundo", "mestiço de merda", "mulato nojento", "cholo desgraçado", "branquelo sujo",
+    "chinês de merda", "japonês lazarento", "indiano nojento", "africano fedido", "muçulmano terrorista",
+    "terrorista do oriente", "latino analfabeto", "mexicano delinquente", "nordestino burro",
+    "caipira ignorante", "índio preguiçoso", "crioulo sujo", "imigrante ilegal nojento",
+    "sudaca miserável", "africano burro",
+    
+    # Homophobic Slurs
+    "viado de merda", "bichinha nojenta", "boiola fedido", "sapatão sujo", "traveco lazarento",
+    "travesti nojento", "homossexual doente", "afeminado patético", "veado escroto", "lésbica asquerosa",
+    
+    # Offensive Expressions
+    "vá para o inferno", "você é um lixo", "seu merda", "idiota do caralho", "seu inútil", 
+    "desgraçado", "imprestável", "traste humano", "ser inútil", "você fede", "vai tomar no cu",
+    "seu vagabundo", "parasita da sociedade", "lixo humano", "praga", "doente maldito", 
+    "inferno é pouco para você", "você é um câncer", "morra desgraçado", "seu escroto",
+    "ninguém gosta de você", "você não vale nada", "morra maldito", "desapareça", "ninguém vai sentir sua falta",
+    
+    # Vulgar Slang
+    "fuder", "trepar", "comer", "gozar", "chupeta", "putaria", "lamber", "pegação", "puto",
+    "cabrita", "arrocha", "ficante", "pegada", "fodelança", "passar o rodo", "dar um perdido",
+    "comer alguém", "ir para o fight", "sapecar", "pegar geral", "meter o loco",
+    
+    # Derogatory Remarks
+    "burro", "lerdo", "inútil", "estúpido", "tonto", "lento", "tacanho", "reles",
+    "cretino", "insignificante", "bicho do mato", "zé ninguém", "vadio", "preguiçoso",
+    "sanguessuga", "parasita", "malandro de merda", "bicho escroto", "ralé",
+    
+    # Miscellaneous Profanity
+    "caceta", "piranha", "periguete", "cafajeste", "trambiqueiro", "trapaceiro", 
+    "ladrãozinho de merda", "corrupto nojento", "canalha safado", "vigarista imundo", "malandro nojento",
+    "vagabundo safado", "safardana", "cara de pau", "folgado", "abusado", "abestado"
+]
+
+spam_advertisement_words_pt = [
+    # General Spam and Promotions
+    "oferta imperdível", "desconto exclusivo", "promoção especial", "compre agora", "envio grátis",
+    "só hoje", "preço de ocasião", "promoção relâmpago", "ganhe dinheiro fácil", "ganhe prêmios agora",
+    "última oportunidade", "não perca essa chance", "garantia de satisfação", "grátis", "ganhe agora",
+    "desconto por tempo limitado", "faça seu cadastro", "compartilhe para ganhar", "responda e ganhe",
+    "clique aqui", "registre-se agora", "aproveite essa oferta", "receba bônus", "cashback garantido",
+    "ganhe um cupom de desconto", "convite especial", "resgate seu prêmio", "ganhe pontos extras",
+    "promoção exclusiva", "desconto imediato", "oferta válida por tempo limitado",
+
+    # Clickbait and Urgency Phrases
+    "não perca", "aproveite já", "vagas limitadas", "corra antes que acabe", "reserve já", 
+    "oferta expira hoje", "promoção por tempo limitado", "não fique de fora", "aproveite agora",
+    "faça parte", "desconto só para os primeiros", "ganhe uma chance exclusiva", "últimos dias",
+    "garanta seu lugar", "oferta especial só hoje", "envio imediato", "garantia estendida",
+
+    # Scam & Fraudulent Phrases
+    "ganhe dinheiro rápido", "investimento seguro", "lucro garantido", "receita milagrosa",
+    "ganhe sem sair de casa", "fique rico rapidamente", "aposte e ganhe", "multiplique seu dinheiro",
+    "investimento sem risco", "negócio garantido", "acesso VIP", "libere seu saque agora",
+    "você foi selecionado", "parabéns, você ganhou", "resgate seu prêmio", "oferta imperdível",
+    "não perca essa oportunidade de ouro", "investimento de alto retorno", "garantia de sucesso",
+    "plano exclusivo de renda", "ganhe fácil", "investimento revolucionário",
+
+    # Free Products & Giveaway
+    "ganhe um iPhone grátis", "ganhe um carro", "participe do sorteio", "registre-se e concorra",
+    "desbloqueie seu prêmio", "faça o download gratuito", "ganhe pontos extras", "faça parte e ganhe",
+    "sorteio exclusivo", "ganhe prêmios incríveis", "receba brindes exclusivos", "garanta sua amostra grátis",
+    "cadastre-se para ganhar", "oferta de boas-vindas", "presentes exclusivos só hoje", "promoção para novos clientes",
+
+    # Social Media Growth Spam
+    "ganhe seguidores grátis", "aumente suas curtidas agora", "turbo nas redes sociais",
+    "ganhe 10k seguidores em 24h", "ganhe curtidas automáticas", "aumente o engajamento",
+    "melhore o alcance do seu perfil", "faça seu perfil bombar", "mais visualizações agora",
+    "torne-se famoso no Instagram", "ganhe milhares de curtidas", "aumente seus seguidores hoje",
+    "influencie nas redes sociais rapidamente",
+
+    # Cryptocurrency & Investment Spam
+    "invista em bitcoin", "ganhe com criptomoedas", "lucro garantido com investimentos",
+    "retorno rápido e seguro", "multiplique seus ganhos com bitcoin", "receba ganhos diários",
+    "ganhe com o mercado cripto", "investimento de alta rentabilidade", "invista com segurança",
+    "mineração de bitcoin com retorno garantido", "compre criptomoeda sem taxas",
+    "plataforma de investimento segura", "ganhe criptomoeda sem investir", "negócio infalível",
+    "ganhos de alto rendimento", "investimento rápido e seguro",
+
+    # Phishing & Fraudulent Links
+    "clique aqui para desbloquear", "atualize seus dados agora", "seu prêmio está pronto",
+    "verifique sua conta urgente", "seu cartão foi bloqueado", "evite suspensão de conta",
+    "resgate sua senha agora", "problemas na sua conta, clique aqui", "verificação pendente",
+    "ativação necessária", "atualize suas informações", "clique aqui para liberar o acesso",
+    "evite bloqueio de conta", "altere sua senha imediatamente", "notificação importante sobre sua conta",
+
+    # Financial Spam
+    "empréstimo fácil", "empréstimo sem garantia", "dinheiro rápido e fácil", "crédito liberado na hora",
+    "financiamento aprovado", "empréstimo pessoal sem consulta", "ganhe um cartão de crédito",
+    "plano de empréstimo exclusivo", "garantia de crédito imediato", "financiamento sem burocracia",
+    "simule seu empréstimo agora", "ganhe mais crédito rapidamente", "financiamento para negativados",
+    "aproveite sua linha de crédito especial", "dinheiro na conta em 24h",
+
+    # Fake Tech Offers
+    "desconto exclusivo em eletrônicos", "compre o novo iPhone mais barato", "descontos em gadgets",
+    "promoção de tecnologia só hoje", "preço especial para notebooks", "faça upgrade com desconto",
+    "compre 1 e leve 2 em acessórios", "ganhe brindes exclusivos com seu celular",
+    "faça seu pedido com desconto agora", "promoção relâmpago para eletrônicos",
+    "frete grátis para todo Brasil", "promoção válida até meia-noite", "novos gadgets com preços especiais",
+
+    # Health and Weight Loss Spam
+    "perca peso rápido", "dieta milagrosa", "ganhe massa muscular em 7 dias", "produto natural garantido",
+    "cura rápida e segura", "suplemento natural aprovado", "reduza gordura em dias",
+    "aumente a imunidade com este suplemento", "emagreça sem sair de casa", "resultados comprovados em 15 dias",
+    "tratamento natural para emagrecimento", "fórmula exclusiva para perder peso",
+    "transforme seu corpo rapidamente", "dieta que realmente funciona", "método natural para emagrecer",
+
+    # Beauty and Skin Spam
+    "rejuvenesça sua pele agora", "produto de beleza exclusivo", "pele perfeita em dias",
+    "acabe com as rugas rapidamente", "clareie sua pele com este produto", "sorriso mais branco em minutos",
+    "tratamento capilar milagroso", "solução definitiva para acne", "melhore sua pele naturalmente",
+    "produto revolucionário para cabelo", "tratamento natural para olheiras", "cabelos mais fortes em 7 dias",
+    "aparência rejuvenescida garantida", "peça já seu creme exclusivo", "cura rápida para queda de cabelo"
+]
+
+harassment_words_pt = [
+    # General Harassment & Abuse
+    "assédio", "assediador", "assediada", "intimidação", "ameaça", "perseguição", "coerção", "molestamento",
+    "constrangimento", "abuso", "opressão", "pressão psicológica", "chantagem", "violência", "imposição", 
+    "agressão", "hostilidade", "provocação", "desrespeito", "humilhação", "difamação", "calúnia", "injúria",
+    "degradação moral", "ofensa", "desvalorização", "exclusão social", "injustiça", "desmerecimento",
+    "discriminação", "desprezo", "desumanização", "ridicularização", "ameaça verbal", "ameaça física",
+    "desconforto", "afronta", "insulto", "preconceito", "zombaria", "vitimização", "opinião ofensiva",
+    "julgamento injusto", "acusações falsas", "acusação injusta", "rebaixamento moral", "desconfiança",
+    "denúncia maliciosa", "ataque pessoal", "boato", "manipulação emocional", "imposição forçada",
+    
+    # Sexual Harassment
+    "assédio sexual", "comentário inapropriado", "proposição indesejada", "toque inapropriado", 
+    "avanço sexual indesejado", "convite sexual forçado", "pressão para atos sexuais", "exposição indesejada",
+    "olhares invasivos", "contato físico não consentido", "insinuação sexual", "provocação sexual", 
+    "gesto obsceno", "abordagem sexual agressiva", "ameaça sexual", "comentário obsceno", "assédio em locais públicos",
+    "assédio no trabalho", "chantagem sexual", "abuso de poder sexual", "fotos íntimas forçadas", 
+    "chantagem com imagens íntimas", "difusão não autorizada de fotos íntimas", "assédio de rua", 
+    "ameaça de estupro", "pressão para encontros sexuais", "insinuação de favores sexuais",
+    
+    # Workplace Harassment
+    "assédio moral no trabalho", "comentário depreciativo", "intimidação no trabalho", "ameaça de demissão",
+    "pressão para resultados abusivos", "opressão por superiores", "desqualificação profissional",
+    "exclusão de reuniões", "não reconhecimento de mérito", "abuso de autoridade", "desvalorização profissional",
+    "ataques verbais no ambiente de trabalho", "rebaixamento público", "insulto no local de trabalho",
+    "humilhação em público", "piadas ofensivas", "retaliação profissional", "imposição de tarefas excessivas",
+    "negligência proposital", "preferência discriminatória", "tratamento desigual", "críticas destrutivas",
+    "acusações infundadas", "intimidação frequente", "exploração emocional no trabalho",
+
+    # Cyberbullying & Online Harassment
+    "cyberbullying", "bullying online", "ameaça digital", "perseguição online", "exposição forçada online",
+    "distribuição de conteúdo privado sem permissão", "doxxing", "ameaça de vazamento de dados",
+    "difamação em redes sociais", "envio de mensagens ameaçadoras", "comentários ofensivos em publicações",
+    "acusações falsas online", "críticas abusivas em plataformas digitais", "chantagem digital",
+    "ameaça de cancelamento", "compartilhamento de conteúdo ofensivo", "invasão de privacidade digital",
+    "perseguição via mensagem privada", "ameaça em fóruns online", "exposição de fotos íntimas online",
+    "perfil falso para assédio", "comentário abusivo anônimo", "ataques em comentários", "ameaça em grupos online",
+    
+    # Psychological & Emotional Harassment
+    "abuso psicológico", "manipulação emocional", "pressão emocional", "chantagem emocional",
+    "ameaça emocional", "intimidação psicológica", "invasão emocional", "ridicularização emocional",
+    "abusos de confiança", "negação de sentimentos", "silenciamento forçado", "coerção emocional",
+    "exploração de vulnerabilidade", "agressão emocional", "ignorar propositalmente", "negligência emocional",
+    "invalidação de sentimentos", "humilhação psicológica", "ameaça de isolamento", "desprezo constante",
+    "crítica destrutiva contínua", "comparação abusiva", "exigência irracional", "controle abusivo",
+    
+    # Verbal Harassment
+    "gritos ofensivos", "insultos repetidos", "ameaça verbal constante", "comentários depreciativos",
+    "xingamentos constantes", "apelidos pejorativos", "rebaixamento verbal", "acusação direta sem fundamento",
+    "expressões agressivas", "palavras ofensivas", "declarações maliciosas", "ameaças abertas",
+    "afirmações manipuladoras", "depreciação pública", "afirmações destrutivas", "comentários desmoralizantes",
+    "provocações constantes", "ameaça verbal em público", "intimidação verbal", "pressão verbal constante",
+    
+    # Racial, Gender, and Sexuality Harassment
+    "assédio racial", "assédio de gênero", "assédio por orientação sexual", "comentários racistas",
+    "comentários sexistas", "ofensas transfóbicas", "xenofobia", "intimidação por cor de pele",
+    "insinuação discriminatória", "tratamento desigual por raça", "ameaça por identidade de gênero",
+    "exclusão por orientação sexual", "discriminação por deficiência", "ameaça de exclusão social",
+    "perseguição por identidade cultural", "ofensas relacionadas à religião", "abuso por etnia",
+    "desumanização racial", "difamação de comunidades específicas", "estigmatização pública",
+    
+    # Harassment Through Threats & Violence
+    "ameaça de agressão", "ameaça de violência", "chantagem com fotos íntimas", "ameaça de morte",
+    "ameaça de invasão", "ameaça física direta", "ameaça de denúncia falsa", "ameaça contra membros da família",
+    "ameaça de exposição social", "ameaça de desmoralização pública", "ameaça por telefone",
+    "ameaça por e-mail", "ameaça por mensagens instantâneas", "ameaça anônima", "ameaça de destruição de reputação",
+    "chantagem por conteúdo comprometedor", "ameaça de exposição no trabalho", "ameaça de demissão pública",
+    "ameaça de difamação massiva", "ameaça de violência contra amigos",
+
+    # Workplace Harassment
+    "pressão abusiva no trabalho", "ameaça de dispensa injustificada", "retirada de responsabilidades",
+    "atribuição excessiva de tarefas", "rebaixamento proposital", "negociação injusta",
+    "não reconhecimento do trabalho", "boicote profissional", "ambiente de trabalho tóxico",
+    "exclusão proposital de reuniões", "ameaça constante de avaliação negativa",
+    "ameaça de rebaixamento de cargo", "retirada de privilégios", "negação de promoções",
+    "abuso verbal em reuniões", "ataques pessoais no local de trabalho",
+    "crítica constante e destrutiva", "negligência emocional no ambiente profissional",
+    "pressão indevida para resultados", "ameaça de transferência indesejada"
+]
+
+
