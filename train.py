@@ -3,7 +3,7 @@ import torch
 import torch.distributed as dist
 from torch.utils.data import DataLoader, random_split, DistributedSampler
 from torch.nn.parallel import DistributedDataParallel as DDP
-from datasets import load_dataset
+from datasets import load_dataset, Dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, TrainingArguments, Trainer
 
 # Initialize Distributed Training
@@ -19,15 +19,13 @@ def main():
     
     MODEL_NAME = "xlm-roberta-large"
     
-    # Load CSV dataset
-    dataset = load_dataset("csv", data_files={"full": "train.csv"})["full"]
+    # Load CSV dataset and split
+    dataset = load_dataset("csv", data_files={"train": "train.csv"})["train"]
+    split = dataset.train_test_split(test_size=0.1, seed=42)
+    train_dataset = split["train"]
+    test_dataset = split["test"]
 
-    # Split dataset into 90% train, 10% test
-    train_size = int(0.9 * len(dataset))
-    test_size = len(dataset) - train_size
-    train_dataset, test_dataset = random_split(dataset, [train_size, test_size])
-
-    print(f"Training samples: {train_size}, Test samples: {test_size}")
+    print(f"Training samples: {len(train_dataset)}, Test samples: {len(test_dataset)}")
 
     # Load tokenizer
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
@@ -41,30 +39,28 @@ def main():
             max_length=512
         )
 
-    # Tokenize train and test datasets
-    train_dataset = train_dataset.map(preprocess_function)
-    test_dataset = test_dataset.map(preprocess_function)
+    # Tokenize datasets
+    train_dataset = train_dataset.map(preprocess_function, batched=True)
+    test_dataset = test_dataset.map(preprocess_function, batched=True)
 
-    # Convert label column to PyTorch format
+    # Set format for PyTorch
     train_dataset = train_dataset.rename_column("binary_classifier", "labels")
     test_dataset = test_dataset.rename_column("binary_classifier", "labels")
-
     train_dataset.set_format("torch", columns=["input_ids", "attention_mask", "labels"])
     test_dataset.set_format("torch", columns=["input_ids", "attention_mask", "labels"])
 
-    # Load model and move it to the appropriate GPU
+    # Load model
     model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME, num_labels=2)
     model = model.to(torch.cuda.current_device())
-    model = DDP(model, device_ids=[torch.cuda.current_device()])
 
     # Training Arguments
     training_args = TrainingArguments(
         output_dir="./xlm-roberta-binary-classifier",
         evaluation_strategy="epoch",
         save_strategy="epoch",
-        per_device_train_batch_size=16,  # Adjust for memory usage
+        per_device_train_batch_size=16,
         per_device_eval_batch_size=16,
-        gradient_accumulation_steps=2,  # Increase for large batch sizes
+        gradient_accumulation_steps=2,
         learning_rate=2e-5,
         warmup_ratio=0.1,
         weight_decay=0.01,
@@ -73,23 +69,14 @@ def main():
         logging_steps=50,
         save_total_limit=2,
         load_best_model_at_end=True,
-        fp16=True,  # Mixed precision training
+        fp16=True,
         optim="adamw_torch",
-        report_to="none",  # Change to "wandb" if using Weights & Biases
-        ddp_find_unused_parameters=False,  # Optimize DDP
+        report_to="none",
+        ddp_find_unused_parameters=False,  # Critical for DDP efficiency
+        dataloader_pin_memory=True,       # Optimize data transfer
     )
 
-    # Use DistributedSampler for multi-GPU efficiency
-    train_sampler = DistributedSampler(train_dataset)
-    test_sampler = DistributedSampler(test_dataset, shuffle=False)
-
-    train_dataloader = DataLoader(
-        train_dataset, batch_size=training_args.per_device_train_batch_size, sampler=train_sampler
-    )
-    test_dataloader = DataLoader(
-        test_dataset, batch_size=training_args.per_device_eval_batch_size, sampler=test_sampler
-    )
-
+    # Initialize Trainer
     trainer = Trainer(
         model=model,
         args=training_args,
@@ -97,14 +84,8 @@ def main():
         eval_dataset=test_dataset,
     )
 
-    # Train the model
+    # Train and save
     trainer.train()
-
-    # Evaluate the model
-    metrics = trainer.evaluate()
-    print(metrics)
-
-    # Save the trained model
     trainer.save_model("./xlm-roberta-binary-classifier")
     tokenizer.save_pretrained("./xlm-roberta-binary-classifier")
 
