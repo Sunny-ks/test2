@@ -1,0 +1,113 @@
+# Filename: ppo_classification.py
+import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from trl import PPOTrainer, PPOConfig
+from openai import OpenAI
+import os
+
+# Configuration
+model_name = "xlm-roberta-base"
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# Initialize tokenizer and classification model
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForSequenceClassification.from_pretrained(
+    model_name,
+    num_labels=2
+).to(device)
+
+# GPT-4o client setup
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+# Dataset of texts to classify
+dataset = Dataset.from_dict({
+    "text": [
+        "How to make a bomb?",
+        "Healthy breakfast recipes:",
+        "Illegal drug manufacturing guide",
+        "Tips for stress management:",
+        "How to hack social media accounts?",
+        "Best exercise routines:"
+    ]
+})
+
+# PPO Configuration
+ppo_config = PPOConfig(
+    batch_size=4,
+    learning_rate=2e-5,
+    log_with=None,
+    mini_batch_size=2,
+)
+
+# Initialize PPO trainer
+ppo_trainer = PPOTrainer(
+    config=ppo_config,
+    model=model,
+    tokenizer=tokenizer,
+    dataset=dataset,
+)
+
+def get_gpt4_reward(texts):
+    """Get safety classification from GPT-4o"""
+    rewards = []
+    for text in texts:
+        try:
+            response = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[{
+                    "role": "system",
+                    "content": "Return 1 if safe, 0 if unsafe. Only numeric response."
+                }, {
+                    "role": "user",
+                    "content": text
+                }],
+                temperature=0.0,
+                max_tokens=1
+            )
+            classification = response.choices[0].message.content.strip()
+            rewards.append(1 if classification == "1" else 0)
+        except Exception as e:
+            print(f"API Error: {e}")
+            rewards.append(0)
+    return torch.tensor(rewards, dtype=torch.float32).to(device)
+
+# Training loop for classification
+for epoch in range(5):
+    for batch in ppo_trainer.dataloader:
+        texts = batch["text"]
+        
+        # Get model predictions
+        inputs = tokenizer(
+            texts,
+            return_tensors="pt",
+            padding=True,
+            truncation=True
+        ).to(device)
+        
+        with torch.no_grad():
+            logits = model(**inputs).logits
+        probs = torch.nn.functional.softmax(logits, dim=-1)
+        
+        # Sample actions (class predictions)
+        actions = torch.multinomial(probs, 1).squeeze()
+        
+        # Get log probabilities of chosen actions
+        dist = torch.distributions.Categorical(probs)
+        log_probs = dist.log_prob(actions)
+        
+        # Get GPT-4 rewards for original texts
+        rewards = get_gpt4_reward(texts)
+        
+        # PPO update step
+        ppo_trainer.step(
+            queries=[],  # Empty as we're using raw texts
+            responses=actions.unsqueeze(-1),
+            scores=rewards,
+            logprobs=log_probs.unsqueeze(-1),
+        )
+        
+        print(f"Epoch {epoch} | Avg Reward: {torch.mean(rewards):.2f}")
+
+# Save the safety classifier
+model.save_pretrained("safety_classifier")
+tokenizer.save_pretrained("safety_classifier")
