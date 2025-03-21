@@ -1,0 +1,272 @@
+{
+  "safe_content": { "id": "sf", "rules": [
+      {"rule": "Neutral informational content", "example": "The weather forecast predicts rain tomorrow morning."},
+      {"rule": "Educational content without sensitive material", "example": "Photosynthesis is the process by which plants convert sunlight into energy."},
+      {"rule": "Positive community interactions", "example": "Congratulations on your achievement! Your hard work really paid off."},
+      {"rule": "Professional/business communications", "example": "As per our discussion, I've attached the updated proposal for your review."},
+      {"rule": "Objective news reporting without graphic details", "example": "The city council approved the new infrastructure plan with a 7-2 vote."}
+    ]
+  },
+  "self_harm": { "id": "sh",
+    "inappropriate": { "id": "sh_i", "rules": [
+      {"rule": "General expressions of sadness without suicidal intent", "example": "I've been feeling really down lately, nothing seems to make me happy anymore."},
+      {"rule": "Vague expressions of hopelessness", "example": "What's the point of trying? Nothing ever changes."},
+      {"rule": "Non-specific references to personal worthlessness", "example": "Sometimes I feel like everyone would be better off without me around."},
+      {"rule": "Passive wishes about non-existence", "example": "I wish I could just go to sleep and never wake up."},
+      {"rule": "Discussion of past negative feelings without details", "example": "Last year was really dark for me mentally, but I'm still here."}
+    ]},
+    "mature": { "id": "sh_m", "rules": [
+      {"rule": "Specific descriptions of self-harm methods without immediate intent", "example": "When I used to cut myself, I would always use a razor blade on my thighs where no one could see."},
+      {"rule": "Sharing past self-harm experiences with details", "example": "The last time I overdosed, I took 20 pills and woke up in the hospital two days later."},
+      {"rule": "Active seeking of self-harm or suicide information", "example": "What's the most lethal combination of prescription drugs? Asking for personal reasons."},
+      {"rule": "Expressing concrete plans without specified timeline", "example": "I've been collecting my medication for weeks. Eventually I'll have enough to end it all."},
+      {"rule": "Encouraging self-harm behaviors in others", "example": "Burning yourself with cigarettes hurts less than cutting and leaves marks that are easier to hide."}
+    ]},
+    "dangerous": { "id": "sh_d", "rules": [
+      {"rule": "Explicit, immediate suicide plans with means, method and timeline", "example": "I've written my note, given away my belongings, and at midnight I'm going to jump off the bridge. This is goodbye."},
+      {"rule": "Live narration of self-harm actions", "example": "I'm cutting deeper than ever before right now. I can see bone. I don't want to stop the bleeding this time."},
+      {"rule": "Content that provides detailed suicide instructions", "example": "The most effective way to commit suicide is to [detailed method instructions]. This guarantees death in under 5 minutes."},
+      {"rule": "Explicit pacts or coordination for group suicide", "example": "I've found 5 others who are going to join me this weekend. We've agreed on the method and location."},
+      {"rule": "Final communications explicitly indicating imminent suicide", "example": "By the time you read this, I'll be gone. I've made my decision. The gun is loaded and sitting next to me."}
+    ]},
+    "exceptions": [
+      {"rule": "Recovery-focused discussions", "example": "I've been self-harm free for 6 months now, and here are the coping skills that helped me the most."},
+      {"rule": "Educational/awareness content with appropriate framing", "example": "September is Suicide Prevention Month. Here are warning signs to watch for in loved ones."},
+      {"rule": "Common gaming/online expressions without actual intent", "example": "That boss killed me again, I'm literally dying lol"},
+      {"rule": "Support-seeking without detailed plans", "example": "I'm having thoughts about harming myself again. Does anyone know resources that might help?"}
+    ]
+  },
+  "hate_speech": { "id": "hs",
+    "inappropriate": { "id": "hs_i", "rules": [
+      {"rule": "Mild stereotyping without explicit negative judgment", "example": "People from that country are always late to meetings."},
+      {"rule": "Casual use of insensitive terms without apparent malice", "example": "That's so lame, who would design it that way?"},
+      {"rule": "Superficial generalizations about identity groups", "example": "Women are just naturally better at organizing things than men."},
+      {"rule": "Using identity characteristics as casual negative descriptors", "example": "That's such a gay outfit, I wouldn't be caught dead wearing it."},
+      {"rule": "Suggesting preferential treatment of specific groups", "example": "They only got that job because of their background, not because they deserve it."}
+    ]},
+    "mature": { "id": "hs_m", "rules": [
+      {"rule": "Deliberate mockery or ridicule of protected characteristics", "example": "Let me show you how people with that accent sound - they're so dumb they can't even talk right."},
+      {"rule": "Advocating for reduced rights or opportunities for specific groups", "example": "Those people shouldn't be allowed to teach children or hold positions of influence in society."},
+      {"rule": "Explicit claims of moral or intellectual inferiority based on identity", "example": "It's just a biological fact that their race has lower cognitive abilities than ours."},
+      {"rule": "Dehumanizing comparisons without calling for violence", "example": "They breed like rats and have about the same level of cleanliness and civilization."},
+      {"rule": "Content promoting harmful conspiracy theories about specific groups", "example": "That religious group is secretly controlling the media and banks to manipulate society."}
+    ]},
+    "dangerous": { "id": "hs_d", "rules": [
+      {"rule": "Explicit calls for violence against identity groups", "example": "The only solution to our problems is to eliminate all [specific ethnic group] from our country."},
+      {"rule": "Content promoting genocide or mass deportation", "example": "We need a final solution for those people - they should all be rounded up and removed permanently."},
+      {"rule": "Detailed content inciting hatred with specific action plans", "example": "Here's how we can target members of that community - identify where they live and systematically harass them until they leave."},
+      {"rule": "Glorification of hate crimes or historical atrocities", "example": "What they did to those people wasn't nearly enough - we should bring back those methods but make them even more severe."},
+      {"rule": "Extreme dehumanization combined with direct threats", "example": "They're vermin who don't deserve to live among humans. We should hunt them down like the animals they are."}
+    ]},
+    "exceptions": [
+      {"rule": "Academic discussion of historical discrimination", "example": "Historical segregation laws in the American South included restrictions on voting rights and education."},
+      {"rule": "Quoting offensive content for educational purposes", "example": "The historical document contained the slur '___' which demonstrated the prejudicial attitudes of the era."},
+      {"rule": "Reclaiming language by members of the targeted group", "example": "As a member of this community, I use this term among friends, but I understand why others shouldn't use it."},
+      {"rule": "Satire that clearly targets prejudice itself", "example": "Clear satirical content that mocks racist attitudes rather than promoting them."}
+    ]
+  },
+  "harassment": { "id": "hr",
+    "inappropriate": { "id": "hr_i", "rules": [
+      {"rule": "Single instances of mild personal insults", "example": "You're not very smart if you believe that."},
+      {"rule": "Dismissive or condescending comments", "example": "Maybe if you actually read a book sometime, you'd understand this simple concept."},
+      {"rule": "Unwanted but non-threatening contact after being ignored", "example": "Hey, I've messaged you three times now, why aren't you responding?"},
+      {"rule": "Mocking someone's appearance or abilities", "example": "With that haircut, no wonder nobody takes your opinions seriously."},
+      {"rule": "Mild exclusionary language", "example": "People like you don't really belong in these discussions."}
+    ]},
+    "mature": { "id": "hr_m", "rules": [
+      {"rule": "Sustained personal attacks on character or competence", "example": "Every single post you make shows what a complete fraud and failure you are at everything you do."},
+      {"rule": "Deliberate and repeated antagonism", "example": "I'm going to comment on every single thing you post to let everyone know what a terrible person you are."},
+      {"rule": "Encouraging group harassment without explicit threats", "example": "Everyone should message this person and tell them how disgusting their opinions are."},
+      {"rule": "Moderate intimidation or implied consequences", "example": "You should be careful about posting things like that. People have lost their jobs for less."},
+      {"rule": "Sharing potentially embarrassing information about someone", "example": "Did everyone know that this person failed their exams twice? Maybe that's why their opinions are so uneducated."}
+    ]},
+    "dangerous": { "id": "hr_d", "rules": [
+      {"rule": "Explicit threats of physical violence", "example": "I know where you live and I'm coming to teach you a lesson you won't forget."},
+      {"rule": "Doxxing or threatening to expose private personal information", "example": "Keep arguing with me and I'll post your home address and workplace for everyone to see."},
+      {"rule": "Detailed plans for stalking or monitoring someone", "example": "I've been tracking your movements for weeks and know your daily routine. I'll be seeing you soon."},
+      {"rule": "Explicit encouragement of self-harm directed at an individual", "example": "Everyone would be happier if you just killed yourself. Do us all a favor."},
+      {"rule": "Coordinated mass harassment campaigns with specific tactics", "example": "Here's how we can drive this person off the platform: everyone report their account daily, send threatening messages from multiple accounts, and contact their employer."}
+    ]},
+    "exceptions": [
+      {"rule": "Mutual friendly teasing with established rapport", "example": "Banter between friends where both parties are clearly comfortable with the exchange."},
+      {"rule": "Professional criticism of public figures limited to their work", "example": "This politician's policy proposal contains several logical inconsistencies and factual errors."},
+      {"rule": "Satirical content clearly not targeting individuals", "example": "Humor that parodies general situations rather than attacking specific people."},
+      {"rule": "Self-deprecation or inviting feedback", "example": "I know I'm terrible at this game, feel free to give me honest tips!"}
+    ]
+  },
+  "violence": { "id": "vl",
+    "inappropriate": { "id": "vl_i", "rules": [
+      {"rule": "Non-graphic references to historical violence", "example": "The medieval period featured numerous battles between rival kingdoms."},
+      {"rule": "General mentions of weapons without violent context", "example": "Police officers typically carry firearms and non-lethal equipment like tasers."},
+      {"rule": "Mild fictional violence typical in entertainment", "example": "The superhero defeated the villain in a spectacular fight scene."},
+      {"rule": "Abstract discussions of self-defense", "example": "If someone attacked me, I'd try to defend myself however necessary."},
+      {"rule": "Sports with sanctioned physical contact", "example": "That boxing match ended with an impressive knockout in the third round."}
+    ]},
+    "mature": { "id": "vl_m", "rules": [
+      {"rule": "Detailed descriptions of violent acts without glorification", "example": "The documentary included testimony about prisoners being beaten and deprived of food."},
+      {"rule": "Expressing desires to commit violence without specific plans", "example": "Sometimes I just want to punch my boss in the face for how he treats everyone."},
+      {"rule": "Discussing methods of violence in educational contexts", "example": "This history presentation explains various torture methods used during the Inquisition."},
+      {"rule": "Glorification of violent events without encouraging imitation", "example": "That bar fight was so satisfying to watch, the guy totally deserved to get knocked out."},
+      {"rule": "Realistic violent content in appropriate creative contexts", "example": "In my novel, the murder scene includes detailed description of the stabbing and resulting blood loss."}
+    ]},
+    "dangerous": { "id": "vl_d", "rules": [
+      {"rule": "Specific, credible threats of imminent violence", "example": "I'm bringing my gun to school tomorrow to get revenge on those who bullied me."},
+      {"rule": "Detailed instructions for creating weapons or harmful devices", "example": "Here's a step-by-step guide for making a bomb using household chemicals: [detailed instructions]."},
+      {"rule": "Explicit calls for violence against specific groups or individuals", "example": "We need to eliminate all members of that community - here's how we should attack them."},
+      {"rule": "Glorification of mass casualty events or terrorists", "example": "That school shooter was a hero who inspired me. We need more people willing to do what he did."},
+      {"rule": "Sharing extremely graphic, real violence with positive commentary", "example": "Check out this video of an actual execution - it's so satisfying to watch them suffer."}
+    ]},
+    "exceptions": [
+      {"rule": "Historical documentation with appropriate context", "example": "This World War II footage shows the reality of combat that soldiers faced."},
+      {"rule": "Professional discussions among relevant fields", "example": "In forensic analysis, these wound patterns indicate a specific type of weapon was used."},
+      {"rule": "Clearly fictional or fantasy violence", "example": "In the game, players can cast spells that damage opponent characters."},
+      {"rule": "Journalistic reporting on violent events", "example": "News coverage of a conflict zone with appropriate context and sensitivity."}
+    ]
+  },
+  "public_threat": { "id": "pt",
+    "inappropriate": { "id": "pt_i", "rules": [
+      {"rule": "Vague expressions of anger toward institutions", "example": "Someone should teach those politicians a lesson."},
+      {"rule": "Hypothetical scenarios of public unrest", "example": "What if people got so angry they stormed government buildings?"},
+      {"rule": "Ambiguous warnings without specific threats", "example": "People should think twice about attending large public gatherings these days."},
+      {"rule": "General doomsaying without specific threats", "example": "Society is heading for chaos, things are going to get ugly soon."},
+      {"rule": "Expressions of satisfaction at the idea of public disruption", "example": "It would be interesting to see what would happen if the power grid went down."}
+    ]},
+    "mature": { "id": "pt_m", "rules": [
+      {"rule": "Discussing specific but not imminent public disruption", "example": "Someone could easily cause panic by setting off fireworks in that shopping mall."},
+      {"rule": "Detailed discussions of security vulnerabilities", "example": "That government building has surprisingly limited security at the side entrance."},
+      {"rule": "Sharing techniques for public disruption without specific plans", "example": "It's easy to create a diversion by starting a small fire in a trash can."},
+      {"rule": "Suggesting targets for potential attacks without specific plans", "example": "Airports and train stations are always the most vulnerable to attacks."},
+      {"rule": "Discussing methods for evading security measures", "example": "Most metal detectors can't identify ceramic weapons, making them easy to smuggle."}
+    ]},
+    "dangerous": { "id": "pt_d", "rules": [
+      {"rule": "Specific threats with details of location, time, and method", "example": "I'm going to detonate explosives at the central station at noon tomorrow. The devices are already in place."},
+      {"rule": "Detailed plans for mass casualty events", "example": "Here's my specific plan to attack the concert: I'll enter through the east door at 9PM with [detailed description of weapons and tactics]."},
+      {"rule": "Recruiting others for planned attacks", "example": "I need three people to help execute my plan at the shopping mall this weekend. DM me if you're interested."},
+      {"rule": "Sharing tactical information for coordinated attacks", "example": "For our operation at the government building, Team A will secure the exits while Team B neutralizes security."},
+      {"rule": "Claims of imminent attacks with credible details", "example": "The airport will be attacked in the next 24 hours. Multiple explosive devices have been placed throughout Terminal B."}
+    ]},
+    "exceptions": [
+      {"rule": "Fictional scenarios clearly labeled as creative works", "example": "In my thriller novel, the protagonist must prevent an attack on the subway system."},
+      {"rule": "Academic discussions of historical events", "example": "This analysis examines the security failures that allowed the terrorist attack to occur."},
+      {"rule": "Professional security discussions with proper context", "example": "Security professionals discussing vulnerability assessment techniques."},
+      {"rule": "Clearly hypothetical policy discussions", "example": "Discussing how infrastructure could be better protected against potential threats."}
+    ]
+  },
+  "child_grooming": { "id": "cg",
+    "inappropriate": { "id": "cg_i", "rules": [
+      {"rule": "Adults asking minors personal questions beyond what's appropriate", "example": "Do your parents check your phone? What time do they usually go to bed?"},
+      {"rule": "Attempts to establish private communication with minors", "example": "We should continue this conversation in private messages where we can talk more freely."},
+      {"rule": "Excessive compliments focusing on appearance or maturity", "example": "You're so mature for your age. You look much older than 14, very pretty/handsome."},
+      {"rule": "Attempts to establish secretive relationship", "example": "Let's keep our friendship just between us. Your parents wouldn't understand our connection."},
+      {"rule": "Inappropriate gift-giving or offers", "example": "I'd love to buy you that expensive game. Just give me your address and I'll send it."}
+    ]},
+    "mature": { "id": "cg_m", "rules": [
+      {"rule": "Deliberate isolation of minors from support networks", "example": "Your parents are too controlling. You don't need to listen to them. I'm the only one who truly understands you."},
+      {"rule": "Normalizing inappropriate age-gap relationships", "example": "Age is just a number. Many 14-year-olds date adults. It's normal to have these feelings."},
+      {"rule": "Introducing sexual topics in conversations with minors", "example": "Have you ever kissed anyone? Would you like me to teach you about what comes after kissing?"},
+      {"rule": "Requesting photos or personal information from minors", "example": "Could you send me photos of yourself? Maybe in your swimwear? I just want to see more of you."},
+      {"rule": "Leveraging trust to establish inappropriate control", "example": "Since I've helped you so much, it's only fair that you do something for me now. Don't you want to make me happy?"}
+    ]},
+    "dangerous": { "id": "cg_d", "rules": [
+      {"rule": "Explicit sexual communication with identified minors", "example": "Explicit sexual messages sent to someone known to be underage."},
+      {"rule": "Soliciting sexual content from minors", "example": "I want you to send me nude photos. No one will know, and it's how you can prove you trust me."},
+      {"rule": "Planning in-person meetings with minors for sexual purposes", "example": "Let's meet at the park where no one will see us. Don't tell your parents where you're going."},
+      {"rule": "Sharing sexual or pornographic content with minors", "example": "Sending explicit sexual images or videos to someone known to be underage."},
+      {"rule": "Threats or blackmail to obtain compliance from minors", "example": "If you don't send more photos, I'll share the ones you already sent with everyone at your school."}
+    ]},
+    "exceptions": [
+      {"rule": "Age-appropriate educational content with proper context", "example": "A teacher providing approved sex education materials in an educational setting."},
+      {"rule": "Legitimate support resources for minors", "example": "If you're experiencing these issues, here are some trusted hotlines and websites designed to help young people."},
+      {"rule": "Peer-to-peer communication between minors", "example": "Conversations between people of similar ages discussing age-appropriate topics."},
+      {"rule": "Professional guidance with appropriate boundaries", "example": "A school counselor discussing academic or career options with proper professional boundaries."}
+    ]
+  },
+  "sexual_content": { "id": "sx",
+    "inappropriate": { "id": "sx_i", "rules": [
+      {"rule": "Mild suggestive content without explicit details", "example": "That outfit leaves little to the imagination."},
+      {"rule": "Double entendres or innuendo", "example": "That's what she said! (in response to an unintentionally suggestive comment)"},
+      {"rule": "Non-graphic references to attraction or dating", "example": "We spent the night together and had a really good time."},
+      {"rule": "Mild flirtatious comments", "example": "You look amazing in that outfit. I can't stop looking at you."},
+      {"rule": "Educational references to sexuality with appropriate context", "example": "The documentary discussed changing attitudes toward sexuality throughout history."}
+    ]},
+    "mature": { "id": "sx_m", "rules": [
+      {"rule": "Detailed discussions of sexual activities without explicit graphic descriptions", "example": "We had passionate sex all night, and it was an incredible experience."},
+      {"rule": "Soliciting adult sexual partners", "example": "Looking for someone to hook up with tonight. Adults only, please DM me."},
+      {"rule": "Sexual comments focused on specific body parts", "example": "Your breasts look amazing in that top. I'd love to see more."},
+      {"rule": "Sharing suggestive but non-pornographic images", "example": "Sharing provocative photos in revealing clothing but without nudity."},
+      {"rule": "Discussions of fetishes or specific sexual preferences", "example": "I'm really into bondage and dominance. Let me tell you about my preferences."}
+    ]},
+    "dangerous": { "id": "sx_d", "rules": [
+      {"rule": "Graphic depictions of non-consensual sexual acts", "example": "Detailed descriptions of sexual assault or rape with explicit details."},
+      {"rule": "Content sexualizing minors", "example": "Any content depicting, describing, or suggesting sexual acts involving people under 18."},
+      {"rule": "Extreme sexual content involving violence or degradation", "example": "Detailed descriptions of sexual acts involving severe pain, injury, or extreme humiliation."},
+      {"rule": "Content promoting bestiality or necrophilia", "example": "Descriptions or advocacy of sexual acts with animals or deceased persons."},
+      {"rule": "Sharing sexually explicit content without consent", "example": "Posting intimate images of someone without their permission (revenge pornography)."}
+    ]},
+    "exceptions": [
+      {"rule": "Legitimate sexual education materials", "example": "Clinical descriptions of reproductive health or sexual development in educational contexts."},
+      {"rule": "Consensual sexual discussions between adults", "example": "Sexual conversation between adults who are both actively participating and comfortable."},
+      {"rule": "Medical discussions of sexual health", "example": "Discussing symptoms of sexually transmitted infections for health purposes."},
+      {"rule": "Artistic or literary works with appropriate content warnings", "example": "Literary fiction that includes sexual content as part of the narrative, with appropriate audience targeting."}
+    ]
+  },
+  "extremism": { "id": "ex",
+    "inappropriate": { "id": "ex_i", "rules": [
+      {"rule": "Expression of fringe political or religious views without promoting violence", "example": "I believe the government should be completely dismantled and replaced with a new system."},
+      {"rule": "General criticism of mainstream institutions or values", "example": "The entire banking system is corrupt and designed to exploit ordinary people."},
+      {"rule": "Use of known extremist terminology or coded language", "example": "We need to secure a future for our children and preserve our heritage."},
+      {"rule": "Sharing content from extremist sources without explicit endorsement", "example": "This article from [known extremist website] makes some interesting points about government overreach."},
+      {"rule": "Conspiracy theories without direct calls to action", "example": "Secret global elites are controlling world events through hidden organizations."}
+    ]},
+    "mature": { "id": "ex_m", "rules": [
+      {"rule": "Glorification or idolization of extremist figures", "example": "He may be called a terrorist by the media, but he's actually a freedom fighter and hero to our cause."},
+      {"rule": "Celebrating or justifying extremist violence in general terms", "example": "The attack was unfortunate but necessary to wake people up to the realities of our struggle."},
+      {"rule": "Promoting extremist ideology as superior", "example": "Our worldview is the only path to saving society from moral and cultural collapse."},
+      {"rule": "Dehumanizing rhetoric toward designated out-groups", "example": "Those people are parasites draining resources from true citizens. They cannot be reasoned with."},
+      {"rule": "Advocating for radical societal transformation through unspecified means", "example": "The system is beyond reform and must be completely destroyed to build our ideal society."}
+    ]},
+    "dangerous": { "id": "ex_d", "rules": [
+      {"rule": "Explicit instructions for terrorist attacks or extremist violence", "example": "Here's how to carry out an attack for maximum casualties and media impact: [detailed instructions]."},
+      {"rule": "Active recruitment for violent extremist organizations", "example": "Our militant group is accepting new members committed to armed struggle. Contact me to join."},
+      {"rule": "Detailed tactical planning for violent activities", "example": "For the operation next week, Team A will target the infrastructure while Team B creates a diversion."},
+      {"rule": "Explicit calls for violence against specific groups", "example": "The time for talk is over. We must eliminate all [specific group] through whatever means necessary."},
+      {"rule": "Providing resources for terrorist activities", "example": "Here's how to anonymously provide financial support to our fighters in the field."}
+    ]},
+    "exceptions": [
+      {"rule": "Academic or historical analysis with appropriate context", "example": "This research paper examines the psychological factors that lead to radicalization."},
+      {"rule": "Journalistic reporting on extremist movements", "example": "News coverage documenting extremist activities without promoting their ideology."},
+      {"rule": "Deradicalization or counter-extremism content", "example": "Content specifically designed to counter extremist narratives or support those leaving extremist groups."},
+      {"rule": "Clearly fictional or hypothetical scenarios", "example": "A thriller novel depicting fictional extremist plots, clearly marketed as fiction."}
+    ]
+  },
+  "spam_advertisement": { "id": "sp", "rules": [
+      {"rule": "Unsolicited commercial promotions", "example": "CHECK OUT THESE AMAZING DEALS! 80% OFF ALL PRODUCTS! CLICK HERE NOW!"},
+      {"rule": "Account or item buying/selling outside designated platforms", "example": "Selling my gaming account with rare items, $50 PayPal only, DM me."},
+      {"rule": "Repeated identical commercial messages", "example": "Posting the same promotional message across multiple unrelated discussions."},
+      {"rule": "Deceptive marketing practices", "example": "Guaranteed weight loss - lose 30 pounds in 7 days with this secret pill doctors don't want you to know about!"},
+      {"rule": "Promotion of questionable financial opportunities", "example": "Make $5000/week working from home! Just send $99 to get started with this foolproof system."},
+      {"rule": "Phishing attempts or fraudulent offers", "example": "Your account has been compromised. Click this link to verify your identity and restore access."},
+      {"rule": "Automated or bot-generated promotional content", "example": "Generic, irrelevant promotional content posted by automated systems."},
+      {"rule": "Disguised advertisements pretending to be organic content", "example": "Just wanted to share my amazing experience with [Product]! It completely changed my life! (Actually a paid promotion)"},
+      {"rule": "Unsolicited referral or affiliate links", "example": "Use my code to sign up and get $10 off your first purchase!"},
+      {"rule": "Unrelated commercial solicitations in community spaces", "example": "Promoting cryptocurrency investments in a support group for bereaved parents."},
+      {"rule": "Exchange of real-world currency for digital items outside official channels", "example": "Selling in-game gold for PayPal payments, $5 per 1000 gold."},
+      {"rule": "Promoting services against platform terms", "example": "I offer account boosting services, give me your login and $20 and I'll rank you up."},
+      {"rule": "Call-to-actions for promotional purposes", "example": "LIKE, SUBSCRIBE, SHARE, COMMENT! Don't forget to hit the notification bell!"}
+    ],
+    "exceptions": [
+      {"rule": "Responses to specific requests for product recommendations", "example": "Since you asked for headphone suggestions, I've been using Model X and really like them."},
+      {"rule": "Clearly labeled sponsored content in appropriate contexts", "example": "Properly disclosed partnerships or sponsorships following platform guidelines."},
+      {"rule": "Sharing personal creative works in appropriate venues", "example": "I just published my first novel, it's available at [link] if anyone's interested in fantasy stories."},
+      {"rule": "In-game trading within the game's intended systems", "example": "Trading resources using the game's official trading system."},
+      {"rule": "Relevant professional services in appropriate contexts", "example": "As a certified personal trainer, I offer coaching services" in a fitness discussion."},
+      {"rule": "Limited personal recommendations without financial interest", "example": "I'm not affiliated with them, but this product solved that exact problem for me."},
+      {"rule": "Fundraising for legitimate charities in appropriate contexts", "example": "I'm participating in a charity run for cancer research, donations appreciated."},
+      {"rule": "Authentic discussion of products without promotional intent", "example": "I've been using this software for years and genuinely recommend it."},
+      {"rule": "Official business communications in appropriate channels", "example": "Official customer service responses in designated support channels."},
+      {"rule": "Community events without commercial intent", "example": "We're organizing a free online workshop this weekend for beginners."},
+      {"rule": "Non-commercial requests for information", "example": "Can anyone recommend a good book on this topic?"},
+      {"rule": "Legitimate classified listings in designated areas", "example": "Posts in dedicated 'marketplace' or 'for sale' sections following platform rules."}
+    ]
+  }
+}

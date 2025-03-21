@@ -1,0 +1,151 @@
+{
+  "safe_content": { "id": "sf", "rules": [
+      {"rule": "Neutral informational content", "example": "The weather forecast predicts rain tomorrow morning."},
+      {"rule": "Educational content without sensitive material", "example": "Photosynthesis is the process by which plants convert sunlight into energy."},
+      {"rule": "Positive community interactions", "example": "Congratulations on your achievement! Your hard work really paid off."},
+      {"rule": "Professional/business communications", "example": "As per our discussion, I've attached the updated proposal for your review."},
+      {"rule": "Objective news reporting without graphic details", "example": "The city council approved the new infrastructure plan with a 7-2 vote."}
+    ]
+  },
+  "self_harm": { "id": "sh", "rules": [
+      {"rule": "Expressions of hopelessness or worthlessness", "example": "What's the point of trying? Nothing ever changes."},
+      {"rule": "References to suicidal thoughts or ideation", "example": "Sometimes I feel like everyone would be better off without me around."},
+      {"rule": "Descriptions of self-harming behaviors", "example": "When I'm feeling really low, I cut myself to feel something different."},
+      {"rule": "Seeking methods or information about self-harm", "example": "What's the most effective way to end things? Asking for personal reasons."},
+      {"rule": "Explicit plans or timelines for self-harm", "example": "I've been saving pills for weeks and tonight I'm finally going to take them all."},
+      {"rule": "Encouraging others to harm themselves", "example": "Cutting is a good way to deal with emotional pain, you should try it."}
+    ],
+    "exceptions": [
+      {"rule": "Recovery-focused discussions", "example": "I've been self-harm free for 6 months now, and here are the coping skills that helped me."},
+      {"rule": "Educational/awareness content with appropriate framing", "example": "September is Suicide Prevention Month. Here are warning signs to watch for in loved ones."},
+      {"rule": "Common gaming/online expressions without actual intent", "example": "That boss killed me again, I'm literally dying lol"},
+      {"rule": "Support-seeking without detailed plans", "example": "I'm having thoughts about harming myself. Does anyone know resources that might help?"}
+    ]
+  },
+  "hate_speech": { "id": "hs", "rules": [
+      {"rule": "Negative stereotyping of protected groups", "example": "People from that country are always lazy and dishonest."},
+      {"rule": "Using slurs or derogatory terms for identity groups", "example": "Those [slur] don't deserve to live in our neighborhood."},
+      {"rule": "Promoting discrimination based on protected characteristics", "example": "Companies shouldn't hire people from that religious group, they can't be trusted."},
+      {"rule": "Dehumanizing language toward identity groups", "example": "They're not really human, they're more like animals."},
+      {"rule": "Advocating for reduced rights for specific groups", "example": "Those people shouldn't be allowed to vote or have the same rights as us."},
+      {"rule": "Promoting violence against protected groups", "example": "Someone should teach those people a lesson with physical violence."}
+    ],
+    "exceptions": [
+      {"rule": "Academic discussion of historical discrimination", "example": "Historical segregation laws in the American South included restrictions on voting rights and education."},
+      {"rule": "Quoting offensive content for educational purposes", "example": "The historical document contained the slur '___' which demonstrated the prejudicial attitudes of the era."},
+      {"rule": "Reclaiming language by members of the targeted group", "example": "As a member of this community, I use this term among friends, but I understand why others shouldn't use it."},
+      {"rule": "Satire that clearly targets prejudice itself", "example": "Clear satirical content that mocks racist attitudes rather than promoting them."}
+    ]
+  },
+  "harassment": { "id": "hr", "rules": [
+      {"rule": "Persistent unwanted contact", "example": "I'm going to keep messaging you every day until you respond."},
+      {"rule": "Personal attacks or insults directed at individuals", "example": "You're pathetic and nobody values your opinions."},
+      {"rule": "Mocking someone's appearance or characteristics", "example": "With that face, no wonder nobody wants to date you."},
+      {"rule": "Encouraging others to target an individual", "example": "Everyone should message this person and tell them how terrible they are."},
+      {"rule": "Threats to reveal private information", "example": "I know where you live and will share your address if you don't do what I say."},
+      {"rule": "Explicit threats of harm toward individuals", "example": "Keep talking like that and I'll make sure you regret it."}
+    ],
+    "exceptions": [
+      {"rule": "Mutual friendly teasing with established rapport", "example": "Banter between friends where both parties are clearly comfortable with the exchange."},
+      {"rule": "Professional criticism of public figures limited to their work", "example": "This politician's policy proposal contains several logical inconsistencies and factual errors."},
+      {"rule": "Satirical content clearly not targeting individuals", "example": "Humor that parodies general situations rather than attacking specific people."},
+      {"rule": "Self-deprecation or inviting feedback", "example": "I know I'm terrible at this game, feel free to give me honest tips!"}
+    ]
+  },
+  "violence": { "id": "vl", "rules": [
+      {"rule": "Descriptions of graphic violence", "example": "The knife cut through his flesh, blood pouring from the deep wound as he screamed in agony."},
+      {"rule": "Glorifying or celebrating violent acts", "example": "That video of the protester getting beaten was so satisfying to watch."},
+      {"rule": "Expressing desires to commit violence", "example": "I want to punch my boss in the face for how he treats everyone."},
+      {"rule": "Threats of violence against individuals or groups", "example": "Those people deserve to be attacked for their beliefs."},
+      {"rule": "Instructions for committing violent acts", "example": "Here's how to create a weapon that can cause serious harm: [instructions]."},
+      {"rule": "Sharing graphic imagery of real violence", "example": "Check out this video of an actual fight where someone gets knocked unconscious."}
+    ],
+    "exceptions": [
+      {"rule": "Historical documentation with appropriate context", "example": "This World War II footage shows the reality of combat that soldiers faced."},
+      {"rule": "Professional discussions among relevant fields", "example": "In forensic analysis, these wound patterns indicate a specific type of weapon was used."},
+      {"rule": "Clearly fictional or fantasy violence", "example": "In the game, players can cast spells that damage opponent characters."},
+      {"rule": "Journalistic reporting on violent events", "example": "News coverage of a conflict zone with appropriate context and sensitivity."}
+    ]
+  },
+  "public_threat": { "id": "pt", "rules": [
+      {"rule": "Threatening public locations or events", "example": "Someone should attack that concert venue to send a message."},
+      {"rule": "Discussing security vulnerabilities of public spaces", "example": "That school has minimal security and would be an easy target."},
+      {"rule": "Sharing methods for carrying out public attacks", "example": "Here's how to create maximum disruption in a crowded space."},
+      {"rule": "Expressing intent to cause public harm", "example": "I'm going to make everyone at that mall regret going shopping tomorrow."},
+      {"rule": "Providing specific details about planned attacks", "example": "The bomb is already in place at the station, set to detonate at noon."},
+      {"rule": "Recruiting others for violent public actions", "example": "I need people to help carry out my plan at the government building."}
+    ],
+    "exceptions": [
+      {"rule": "Fictional scenarios clearly labeled as creative works", "example": "In my thriller novel, the protagonist must prevent an attack on the subway system."},
+      {"rule": "Academic discussions of historical events", "example": "This analysis examines the security failures that allowed the terrorist attack to occur."},
+      {"rule": "Professional security discussions with proper context", "example": "Security professionals discussing vulnerability assessment techniques."},
+      {"rule": "Clearly hypothetical policy discussions", "example": "Discussing how infrastructure could be better protected against potential threats."}
+    ]
+  },
+  "child_grooming": { "id": "cg", "rules": [
+      {"rule": "Adults seeking excessive personal information from minors", "example": "Where do you live? Are your parents home during the day? What's your address?"},
+      {"rule": "Attempts to move communication with minors to private channels", "example": "Let's talk on a different app where messages disappear. Don't tell anyone about it."},
+      {"rule": "Efforts to isolate minors from support networks", "example": "Your parents don't understand you like I do. You don't need to listen to them."},
+      {"rule": "Introducing minors to sexual topics or content", "example": "Have you ever thought about sex? I can teach you about these things."},
+      {"rule": "Soliciting photos or personal information from known minors", "example": "Can you send me pictures of yourself? Maybe in your swimwear?"},
+      {"rule": "Arranging private meetings with minors", "example": "We should meet up somewhere private where no one will see us together."}
+    ],
+    "exceptions": [
+      {"rule": "Age-appropriate educational content with proper context", "example": "A teacher providing approved sex education materials in an educational setting."},
+      {"rule": "Legitimate support resources for minors", "example": "If you're experiencing these issues, here are some trusted hotlines and websites designed to help young people."},
+      {"rule": "Peer-to-peer communication between minors", "example": "Conversations between people of similar ages discussing age-appropriate topics."},
+      {"rule": "Professional guidance with appropriate boundaries", "example": "A school counselor discussing academic or career options with proper professional boundaries."}
+    ]
+  },
+  "sexual_content": { "id": "sx", "rules": [
+      {"rule": "Explicit sexual language or descriptions", "example": "Detailed descriptions of sexual acts or encounters."},
+      {"rule": "Soliciting sexual content or interactions", "example": "Send me nude photos of yourself. I'll send you some back."},
+      {"rule": "Sharing sexually explicit or suggestive images", "example": "Posting revealing or pornographic images in conversations."},
+      {"rule": "Sexual content involving minors", "example": "Any content suggesting or depicting sexual acts involving people under 18."},
+      {"rule": "Non-consensual sexual content", "example": "Sharing intimate images of someone without their permission."},
+      {"rule": "Extreme or harmful sexual content", "example": "Content depicting sexual acts involving violence, animals, or deceased persons."}
+    ],
+    "exceptions": [
+      {"rule": "Legitimate sexual education materials", "example": "Clinical descriptions of reproductive health or sexual development in educational contexts."},
+      {"rule": "Consensual sexual discussions between adults", "example": "Sexual conversation between adults who are both actively participating and comfortable."},
+      {"rule": "Medical discussions of sexual health", "example": "Discussing symptoms of sexually transmitted infections for health purposes."},
+      {"rule": "Artistic or literary works with appropriate content warnings", "example": "Literary fiction that includes sexual content as part of the narrative, with appropriate audience targeting."}
+    ]
+  },
+  "extremism": { "id": "ex", "rules": [
+      {"rule": "Promoting violent extremist ideologies", "example": "Our group's manifesto explains why violence is necessary to achieve our goals."},
+      {"rule": "Glorifying known terrorist groups or individuals", "example": "That attack was a heroic act that advanced our cause. The perpetrators are martyrs."},
+      {"rule": "Providing instructions for terrorist activities", "example": "Here's how to make explosives using common household items."},
+      {"rule": "Recruiting for extremist organizations", "example": "If you believe in our cause, contact me to join our militant group."},
+      {"rule": "Dehumanizing rhetoric toward targeted groups", "example": "Those people are vermin who must be eliminated to purify our society."},
+      {"rule": "Calling for violent overthrow of institutions", "example": "The time for peaceful protest is over. We must use force to destroy the system."}
+    ],
+    "exceptions": [
+      {"rule": "Academic or historical analysis with appropriate context", "example": "This research paper examines the psychological factors that lead to radicalization."},
+      {"rule": "Journalistic reporting on extremist movements", "example": "News coverage documenting extremist activities without promoting their ideology."},
+      {"rule": "Deradicalization or counter-extremism content", "example": "Content specifically designed to counter extremist narratives or support those leaving extremist groups."},
+      {"rule": "Clearly fictional or hypothetical scenarios", "example": "A thriller novel depicting fictional extremist plots, clearly marketed as fiction."}
+    ]
+  },
+  "spam_advertisement": { "id": "sp", "rules": [
+      {"rule": "Unsolicited commercial promotions", "example": "CHECK OUT THESE AMAZING DEALS! 80% OFF ALL PRODUCTS! CLICK HERE NOW!"},
+      {"rule": "Account or item buying/selling outside designated platforms", "example": "Selling my gaming account with rare items, $50 PayPal only, DM me."},
+      {"rule": "Repeated identical commercial messages", "example": "Posting the same promotional message across multiple unrelated discussions."},
+      {"rule": "Deceptive marketing practices", "example": "Guaranteed weight loss - lose 30 pounds in 7 days with this secret pill doctors don't want you to know about!"},
+      {"rule": "Promotion of questionable financial opportunities", "example": "Make $5000/week working from home! Just send $99 to get started with this foolproof system."},
+      {"rule": "Phishing attempts or fraudulent offers", "example": "Your account has been compromised. Click this link to verify your identity and restore access."},
+      {"rule": "Disguised advertisements pretending to be organic content", "example": "Just wanted to share my amazing experience with [Product]! It completely changed my life! (Actually a paid promotion)"},
+      {"rule": "Exchange of real-world currency for digital items outside official channels", "example": "Selling in-game gold for PayPal payments, $5 per 1000 gold."}
+    ],
+    "exceptions": [
+      {"rule": "Responses to specific requests for product recommendations", "example": "Since you asked for headphone suggestions, I've been using Model X and really like them."},
+      {"rule": "Clearly labeled sponsored content in appropriate contexts", "example": "Properly disclosed partnerships or sponsorships following platform guidelines."},
+      {"rule": "Sharing personal creative works in appropriate venues", "example": "I just published my first novel, it's available at [link] if anyone's interested in fantasy stories."},
+      {"rule": "In-game trading within the game's intended systems", "example": "Trading resources using the game's official trading system."},
+      {"rule": "Relevant professional services in appropriate contexts", "example": "As a certified personal trainer, I offer coaching services" in a fitness discussion."},
+      {"rule": "Limited personal recommendations without financial interest", "example": "I'm not affiliated with them, but this product solved that exact problem for me."},
+      {"rule": "Fundraising for legitimate charities in appropriate contexts", "example": "I'm participating in a charity run for cancer research, donations appreciated."},
+      {"rule": "Authentic discussion of products without promotional intent", "example": "I've been using this software for years and genuinely recommend it."}
+    ]
+  }
+}

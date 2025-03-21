@@ -1,0 +1,30 @@
+{
+  "safe_content": { "id": "sf", "rules": [
+      {"rule": "Neutral informational content", "example": "The weather forecast predicts rain tomorrow morning with temperatures around 65°F."},
+      {"rule": "Educational content without sensitive material", "example": "Photosynthesis is the process by which plants convert sunlight into energy using chlorophyll."},
+      {"rule": "Positive community interactions", "example": "Congratulations on your achievement! Your hard work and dedication really paid off."},
+      {"rule": "Professional/business communications", "example": "As per our discussion, I've attached the updated proposal for your review by Friday."},
+      {"rule": "Objective news reporting without graphic details", "example": "The city council approved the new infrastructure plan with a 7-2 vote yesterday evening."},
+      {"rule": "General discussions of hobbies or interests", "example": "I've been gardening for years and find that tomatoes grow best in well-drained soil with plenty of sunlight."},
+      {"rule": "Sharing factual information about general topics", "example": "The Great Wall of China is approximately 13,171 miles long and was built over multiple dynasties."},
+      {"rule": "Constructive feedback or suggestions", "example": "Your presentation was well-organized. Consider adding more visual elements to enhance engagement."},
+      {"rule": "Personal opinions on non-controversial topics", "example": "I think chocolate ice cream tastes better than vanilla, but both are delicious."},
+      {"rule": "Positive motivational content", "example": "Never give up on your dreams. With persistence and hard work, you can overcome obstacles."},
+      {"rule": "Humorous content without targeting individuals or groups", "example": "Why don't scientists trust atoms? Because they make up everything!"},
+      {"rule": "Discussion of mainstream entertainment media", "example": "The latest episode of that cooking show featured an impressive soufflé challenge."},
+      {"rule": "Sharing personal accomplishments", "example": "I finally ran my first 5K race this weekend after training for three months!"},
+      {"rule": "Asking and answering general knowledge questions", "example": "Q: What's the capital of Australia? A: Canberra is the capital city."},
+      {"rule": "Expressing gratitude or appreciation", "example": "Thank you for your help with the project. I really appreciate your support."},
+      {"rule": "General health and wellness information", "example": "Regular exercise and balanced nutrition are important components of maintaining good health."},
+      {"rule": "Discussions of food and cooking", "example": "This pasta recipe calls for fresh basil, garlic, olive oil, and parmesan cheese."},
+      {"rule": "Travel experiences and recommendations", "example": "When visiting Barcelona, don't miss the opportunity to see Gaudí's architecture, especially Sagrada Familia."},
+      {"rule": "Technology discussions and troubleshooting", "example": "If your application isn't responding, try closing it completely and restarting your device."},
+      {"rule": "Art and creative expression discussions", "example": "I've been experimenting with watercolor techniques to create more realistic landscape paintings."},
+      {"rule": "Environmental and nature discussions", "example": "Monarch butterflies migrate thousands of miles each year between Canada, the US, and Mexico."},
+      {"rule": "Positive pet and animal content", "example": "My dog learned to shake hands last week. Training with positive reinforcement has been effective."},
+      {"rule": "Factual historical information", "example": "The Renaissance period in Europe spanned roughly from the 14th to the 17th century."},
+      {"rule": "Academic and scientific discussions", "example": "Recent research suggests that certain gut bacteria may influence mood and cognitive function."},
+      {"rule": "Cultural traditions and celebrations", "example": "During Diwali, many people decorate their homes with oil lamps called diyas and colorful rangoli patterns."}
+    ]
+  }
+}
